@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <a href="index.html"></a><img src="./images/Header-Logo.png" class="mobile-logo"></a>
+            <div id="hamburger" class="hamburger">☰</div>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./images/Header-Logo.png" alt="ADM Logo">
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="marketserved.html">Market Served</a></li>
+
+                <!-- INGREDIENTS – NO ANCHOR TAG -->
+                <li class="dropdown">
+                    <span class="drop-btn">Ingredients ▾</span>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MOBILE SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+
+        <div class="close-btn">&times;</div>
+
+        <a href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Market Served</a>
+
+        <!-- MOBILE INGREDIENTS DROPDOWN -->
+        <div class="mobile-dropdown">
+            <div class="mobile-drop-btn">Ingredients ▼</div>
+
+            <div class="mobile-drop-content">
+                <a href="bakery.html">Bakery</a>
+                <a href="confectionery.html">Confectionery</a>
+                <a href="ice-cream.html">Ice Cream & Toppings</a>
+                <a href="beverages.html">Beverages</a>
+                <a href="dairy.html">Dairy</a>
+                <a href="health.html">Health & Nutrition</a>
+                <a href="sauces.html">Sauces & Condiments</a>
+                <a href="fat.html">Edible Fat & Other Product</a>
+            </div>
+        </div>
+
+        <a href="career.html">Career</a>
+        <a href="contact-us.html">Contact Us</a>
+    </div>
+    <!-- SLIDER IMAGES -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://sgutrade.com/wp-content/uploads/2019/05/banner_img-1200x367.jpg" class="slider-img"
+                alt="Slide 1">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://sgutrade.com/wp-content/uploads/2019/05/slide3-1200x367.jpg" class="slider-img"
+                alt="Slide 2">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/ingredients_banner.jpg"
+                class="slider-img" alt="Slide 3">
+        </div>
+    </div>
+
+    <!-- Arrows -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon custom-arrow"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon custom-arrow"></span>
+    </button>
+
+    <!-- CARD OVER SLIDER -->
+    <div class="slider-card">
+        <h3>Premium Product</h3>
+        <p>This is the best selling product with top quality ingredients!</p>
+        <button class="btn btn-success">Explore More</button>
+    </div>
+
+    <!-- </div> -->
+    <section class="hero-section position-relative">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+
+                <!-- LEFT TEXT -->
+                <div class="col-lg-7 text-white mb-4 mb-lg-0 text-center text-lg-start">
+                    <h1 class="fw-bold display-5">
+                        Pioneering Innovation from Farmer to Customer
+                    </h1>
+                    <p class="lead mt-3">
+                        ADM connects harvest to home, utilizing our farmer partnerships, global
+                        transportation capabilities, market insights, and innovation to deliver solutions
+                        today and tomorrow.
+                    </p>
+                    <div class="scroll-down mt-4">
+                        <i class="bi bi-chevron-down fs-2"></i>
+                    </div>
+                </div>
+
+                <!-- RIGHT IMAGE -->
+                <div class="col-lg-5 position-relative rigt-card mb-4 mb-lg-0 text-center">
+
+                    <!-- Green Curve Shape -->
+                    <!-- <svg class="green-curve" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,100 Q100,0 200,100" stroke="#42ab46" stroke-width="4" fill="none" />
+                </svg> -->
+
+                    <!-- Main Image -->
+                    <img src="https://www.adm.com/globalassets/home-page/homepage_c6_mobile_l.png" alt="Woman Eating"
+                        class="img-fluid main-image rounded">
+
+                    <!-- Circular Overlapping Image -->
+                    <img src="https://www.adm.com/globalassets/home-page/hp_c6v2_macro_197519511l.png" alt="Field"
+                        class="circle-image">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--Unlocking-section  -->
+    <section class="Unlocking-section">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-sm-6">
+                    <img src="https://www.adm.com/globalassets/home-page/hp_c12_l.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="heading-unlocking">
+                        <h1>Unlocking Nature <br>Enriching Life</h1>
+                        <p>ADM powers industries ranging from beverages to biofuels, home care to home insulation,
+                            probiotics to pet treats. We're a leader in regenerative agriculture, a trailblazer in
+                            precision fermentation and a pillar of the global food system. We partner with farmers in
+                            the world's most productive agricultural regions to support their businesses and purchase
+                            their crops, utilize our unparalleled transportation and logistics network to move those
+                            crops from areas of supply to areas of demand, and wield a vast manufacturing footprint and
+                            cutting edge technologies to transform them into an unmatched array of innovative food,
+                            feed, fuel and consumer and industrial products for consumers around the globe.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-success">About Sgutrade</button>
+                        <button class="btn btn-success">Latest News</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------Our Solutions----------------- -->
+    <section class="solutions-section container">
+        <div class="row">
+            <!-- LEFT TEXT -->
+            <div class="col-lg-4">
+                <h2 class="fw-bold">Our Solutions<br>Tailored to Your Needs</h2>
+                <p class="mt-3">
+                    ADM is committed to nourishing the quality of life around the globe.
+                    With a vast portfolio of solutions sourced from nature, ADM has something
+                    to bring to the table for all.
+                </p>
+
+                <!-- IMAGE with green background -->
+                <div class="image-wrapper mt-4">
+                    <div class="green-box"></div>
+                    <img src="./images/testing-nurse-image.avif" alt="Scientist" class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMNS -->
+            <div class="col-lg-8">
+                <div class="row gy-4">
+
+                    <!-- 1 -->
+                    <div class="col-md-6 solution-card">
+                        <h6>Human Nutrition</h6>
+                        <p>
+                            With the power of nature, we transform natural products into
+                            ingredients and solutions that help bring nutritious and tasty
+                            food and beverages to consumers.
+                        </p>
+                        <a href="#">DISCOVER MORE →</a>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="col-md-6 solution-card">
+                        <h6>Animal Nutrition</h6>
+                        <p>
+                            We help bring the best customized solutions and services to support
+                            your animals’ health and welfare for all stages of their growth.
+                        </p>
+                        <a href="#">DISCOVER MORE →</a>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="col-md-6 solution-card">
+                        <h6>Pet Nutrition</h6>
+                        <p>
+                            Our pet nutrition experts help you understand opportunities and
+                            create innovative pet products consumers are looking for.
+                        </p>
+                        <a href="#">DISCOVER MORE →</a>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="col-md-6 solution-card">
+                        <h6>Industrial Biosolutions</h6>
+                        <p>
+                            We provide innovative solutions that maintain or even improve
+                            performance standards.
+                        </p>
+                        <a href="#">DISCOVER MORE →</a>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="col-md-6 solution-card">
+                        <h6>Services</h6>
+                        <p>
+                            ADM’s years of experience with transportation and risk mitigation
+                            can give you an edge.
+                        </p>
+                        <a href="#">DISCOVER MORE →</a>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="col-md-6 solution-card">
+                        <h6>Insights & Innovation</h6>
+                        <p>
+                            Access technical capabilities and deep consumer insights through
+                            global innovation problem solvers.
+                        </p>
+                        <a href="#">DISCOVER MORE →</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SGU stories -->
+    <section class="sgu-stories-section py-5">
+        <div class="container position-relative">
+
+            <div class="row">
+                <!-- LEFT IMAGE -->
+                <div class="col-lg-7">
+                    <div class="sgu-image-wrap">
+                        <img src="https://www.adm.com/globalassets/home-page/man-wearing-adm-hat-looks-towards-another-man-holding-rye-cover-crop-in-hand-outdoors_norfolk_beef-feedlot.jpg"
+                            class="img-fluid adm-main-img" alt="">
+                    </div>
+                </div>
+
+                <!-- RIGHT BLUE CARD -->
+                <div class="col-lg-5">
+                    <div class="sgu-blue-card p-4">
+                        <h2 class="fw-bold text-white">SGU Trade Stories</h2>
+                        <p class="text-white mt-3">
+                            SGU Trade is a force multiplier for farmers, supporting their legacies, enhancing
+                            agricultural
+                            resiliency and strengthening food and energy security.
+                        </p>
+                        <button class="btn btn-light mt-3 px-4 py-2 fw-bold">LEARN MORE</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- </section> -->
+            <div class="row justify-content-center mt-5  Procurement-main">
+
+                <div class="col-md-4 mb-4">
+                    <div class="proc-circle">240</div>
+                    <h5 class="proc-title">Procurement Sites</h5>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="proc-circle">1</div>
+                    <h5 class="proc-title">Billion Bushels</h5>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="proc-circle">150</div>
+                    <h5 class="proc-title">Manufacturing Sites</h5>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!------------------Leaders Animal Nutrition  section--------------->
+    <section class="container nutrition-section py-5">
+
+        <div class="nutrition-heading  mb-5 px-3">
+            <h1 class="fw-bold display-6">Leaders in Human Nutrition</h1>
+            <p class="mt-2">
+                Deliver winning formulations that support wellness with ADM’s innovative ingredients
+                and science-based solutions.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-4">
+                <div class="nutrition-card text-center text-md-start">
+                    <img class="img-fluid rounded"
+                        src="https://www.adm.com/globalassets/home-page/imcmarketing-content/c8_sub_2025_consumer_trends_350x197_component_1.jpg"
+                        alt="">
+
+                    <h5 class="mt-3 fw-bold">Era of Infinite Choice</h5>
+
+                    <p>
+                        Our latest e-book examines evolving consumer motivations in an era
+                        of rapid diversification and technological advancement.
+                    </p>
+
+                    <button class="btn btn-success">Learn More</button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="nutrition-card text-center text-md-start">
+                    <img class="img-fluid rounded"
+                        src="https://www.adm.com/globalassets/home-page/imcmarketing-content/c8_sub_2025_consumer_trends_350x197_component_1.jpg"
+                        alt="">
+
+                    <h5 class="mt-3 fw-bold">Market Insights Report for Pet and Animal Wellness</h5>
+
+                    <p>
+                        Discover how science-backed microbiome supporting ingredients,
+                        including pre-, pro-, and postbiotics, are shaping the future of holistic pet care.
+                    </p>
+
+                    <button class="btn btn-success">Learn More</button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="nutrition-card text-center text-md-start">
+                    <img class="img-fluid rounded"
+                        src="https://www.adm.com/globalassets/home-page/imcmarketing-content/c8_sub_2025_consumer_trends_350x197_component_1.jpg"
+                        alt="">
+
+                    <h5 class="mt-3 fw-semibold">Facilitate Global Aquaculture Solutions with Xtract for Aqua</h5>
+
+                    <p>
+                        Explore how the next generation of aquaculture feed additives
+                        utilize microencapsulation technology to ensure the success of its bioactive compounds.
+                    </p>
+
+                    <button class="btn btn-success">Learn More</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!------------------------------career section----------------------->
+    <section class="career-section container py-5">
+        <div class="row align-items-center">
+
+            <!-- Left Image -->
+            <div class="col-lg-6 text-center position-relative">
+                <div class="career-circle-img">
+                    <img src="https://www.adm.com/globalassets/home-page/hp_c13_l.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="leaf long-leaf yellow-leaf"></div>
+                <div class="leaf long-leaf green-leaf"></div>
+
+                <!-- Yellow Line -->
+                <!-- <svg class="yellow-line" width="350" height="250" fill="none" stroke="#f6b000" stroke-width="3">
+                <path d="M10 200 Q100 10 340 200" />
+            </svg> -->
+
+                <!-- Green Line -->
+                <!-- <svg class="green-line" width="350" height="200" fill="none" stroke="#27b43e" stroke-width="3">
+                <path d="M10 20 Q200 150 340 20" />
+            </svg> -->
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <h1 class="fw-bold display-6">Careers that Help You Change the World</h1>
+
+                <p class="text-muted mt-3">
+                    Not every career offers you challenging, rewarding work that also improves lives
+                    across the globe. Whether it’s finding new opportunities for renewable products,
+                    developing the next flavor trend, or ensuring crops get to markets where they’re
+                    needed, the problems we solve make a real difference.
+                </p>
+
+                <button class="btn btn-primary px-4 py-2 mt-3 rounded-pill fw-bold">
+                    WE’RE HIRING
+                </button>
+            </div>
+        </div>
+    </section>
+    <!----------------------footer-------------------->
+    <footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
+
+                    <p class="text-light">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Market Served</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="footer-line">
+
+            <div class="text-center text-light">
+               © 2025 SubNutra All rights reserved. Developed & maintained by Inforag Technology
+            </div> 
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winning Nutrition Solutions</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* MAIN WRAPPER */
+        .sgu-hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* LEFT PURPLE AREA (75%) */
+        .sgu-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #6f2da8;
+            width: 75%;
+            height: 80%;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 90px;
+            padding-right: 50px;
+            z-index: 2;
+        }
+
+        .sgu-content {
+            max-width: 650px;
+        }
+
+        .sgu-heading {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .sgu-text {
+            margin-top: 28px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* RIGHT SIDE GRAIN BACKGROUND (25%) */
+        .sgu-grain {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25%;
+            height: 80%;
+            background-image: url("https://www.adm.com/globalassets/products--services/human-nutrition/hn_c15_pattern.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        /* FOOD IMAGE */
+        .sgu-food {
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 40%;
+            border-radius: 6px;
+            object-fit: cover;
+            z-index: 3;
+        }
+
+        /* RESPONSIVE FOR TABLET / MOBILE */
+        @media(max-width: 992px) {
+
+            .sgu-hero {
+                height: auto;
+                padding-bottom: 40px;
+            }
+
+            /* IMAGE TOP FULL WIDTH */
+            .sgu-food {
+                position: relative;
+                width: 100%;
+                height: auto;
+                top: 0;
+                right: 0;
+                transform: none;
+                border-radius: 0;
+                display: block;
+            }
+
+            /* HIDE GRAIN COMPLETELY */
+            .sgu-grain {
+                display: none;
+            }
+
+            /* PURPLE BOX BELOW IMAGE */
+            .sgu-left {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 40px 25px;
+                margin-top: -5px;
+            }
+
+            .sgu-heading {
+                font-size: 40px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <a href="index.html"></a><img src="./images/Header-Logo.png" class="mobile-logo"></a>
+            <div id="hamburger" class="hamburger">☰</div>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./images/Header-Logo.png" alt="ADM Logo">
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="marketserved.html">Market Served</a></li>
+
+                <!-- INGREDIENTS – NO ANCHOR TAG -->
+                <li class="dropdown">
+                    <span class="drop-btn">Ingredients ▾</span>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MOBILE SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+
+        <div class="close-btn">&times;</div>
+
+        <a href="index.html">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Market Served</a>
+
+        <!-- MOBILE INGREDIENTS DROPDOWN -->
+        <div class="mobile-dropdown">
+            <div class="mobile-drop-btn">Ingredients ▼</div>
+
+            <div class="mobile-drop-content">
+                <a href="bakery.html">Bakery</a>
+                <a href="confectionery.html">Confectionery</a>
+                <a href="ice-cream.html">Ice Cream & Toppings</a>
+                <a href="beverages.html">Beverages</a>
+                <a href="dairy.html">Dairy</a>
+                <a href="health.html">Health & Nutrition</a>
+                <a href="sauces.html">Sauces & Condiments</a>
+                <a href="fat.html">Edible Fat & Other Product</a>
+            </div>
+        </div>
+
+        <a href="career.html">Career</a>
+        <a href="contact-us.html">Contact Us</a>
+    </div>
+    <!-- sgu-hero -->
+    <section class="sgu-hero">
+
+        <!-- FOOD IMAGE TOP (MOBILE) -->
+        <img src="https://www.adm.com/globalassets/products--services/human-nutrition/hn_c15_img.jpg" class="sgu-food">
+
+        <!-- LEFT PURPLE BOX -->
+        <div class="sgu-left">
+            <div class="sgu-content">
+                <h1 class="sgu-heading">Winning Nutrition<br>Solutions</h1>
+                <p class="sgu-text">
+                    We unlock the power of nature and transform natural <br>
+                    products into ingredients and solutions that enrich people’s lives.
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT BACKGROUND GRAIN -->
+        <div class="sgu-grain"></div>
+    </section>
+
+    <!-----------------------Innovative nutrition section----------------------->
+    <section class="quine-section">
+        <div class="container py-5">
+            <div class="row align-items-center">
+
+                <!-- LEFT SECTION -->
+                <div class="col-12 col-md-6 quine-left position-relative">
+
+                    <!-- BACKGROUND PATTERN -->
+                    <img src="https://www.adm.com/globalassets/products--services/human-nutrition/hn_c7_bg.png"
+                        class="quine-bg img-fluid " alt="bg">
+
+                    <!-- MAIN FOOD IMAGE -->
+                    <img src="https://www.adm.com/globalassets/products--services/human-nutrition/hn_c7_img.jpg"
+                        class="quine-main img-fluid" alt="product">
+
+                </div>
+
+                <!-- RIGHT SECTION -->
+                <div class="col-12 col-md-6 quine-content">
+                    <h2 class="fw-bold">Innovative nutrition<br> solutions crafted for you</h2>
+
+                    <p>
+                        We give you an edge in accelerating innovation, going beyond single ingredients to deliver
+                        inspired solutions that meet consumers' evolving wellness needs. Starting at the source, we
+                        develop full-formula, science-based nutrition opportunities that create consumer-winning
+                        applications—tailored for you.
+                    </p>
+                    <p>All around the world, ADM’s team of food scientists, flavorists, chefs and other experts are
+                        reimagining what’s possible by creating and solving challenges to help you deliver what’s next
+                        in nutrition. Partner with us and we can unlock nature and enrich lives together.</p>
+
+                    <div class="d-flex gap-3 mt-4 flex-wrap">
+                        <button class="btn btn-dark px-4 py-2 rounded-pill">PRODUCTS</button>
+                        <button class="btn btn-outline-dark px-4 py-2 rounded-pill">CATEGORIES</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="adm-fullscreen">
+        <img src="https://www.adm.com/globalassets/products--services/human-nutrition/hn_video_img.jpg" class="adm-bg"
+            alt="fullscreen">
+
+        <div class="container">
+            <div class="adm-card">
+                <h2 class="fw-bold">Transforming Nutrition<br>With Purpose</h2>
+
+                <p class="mb-3">
+                    ADM brings expertise, science and global capabilities to help you build foods and
+                    beverages that consumers love and trust.
+                </p>
+
+                <button class="btn btn-dark px-4 py-2 rounded-pill mt-2">
+                    EXPLORE MORE
+                </button>
+            </div>
+        </div>
+    </section>
+    <!--------------food beverage section---------------------->
+    <section class="food-beverage-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://www.adm.com/globalassets/products--services/human-nutrition/foodbev_c12_mockup.jpg"
+                        class="img-fluid food-img" alt="">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Food & Beverage Solutions</h2>
+                    <p>Creating consumer-pleasing foods and beverages is part science, art and business. We partner with
+                        you as co-creators and instigators to spark game-changing ideas and groundbreaking solutions.
+                    </p>
+                    <p>Our extensive food and beverage ingredient portfolio is just one part of our commitment to giving
+                        you the best possible solutions for winning applications. We keep a global, eyes-wide-open,
+                        consumer-centric view of emerging trends that may affect your products, because to succeed, we
+                        both need to know what consumers want today, and tomorrow. This shared knowledge and deep
+                        understanding of consumer behaviors, together with our technical ingenuity, ensure we can help
+                        you find just the right solution to meet your consumers’ evolving demands.</p>
+                    We do everything to help you get to market faster and make your mark in the competitive world of
+                    food and beverage.
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- -------ds solution----- -->
+
+    <section class="ds-wrap">
+
+        <!-- Image Section -->
+        <div class="ds-image-box">
+            <img src="https://www.adm.com/globalassets/products--services/human-nutrition/microsoftteams-image-16.png"
+                alt="Dietary Supplement Image">
+        </div>
+
+        <!-- Overlapping Card -->
+        <div class="ds-info-card">
+            <h2 class="ds-info-title">Dietary Supplement Solutions Consumers Trust</h2>
+            <p class="ds-info-text">
+                Creating innovative consumer-preferred supplements is part science, art and business. We partner with
+                you as co-creators and instigators to spark game-changing ideas and groundbreaking solutions. And our
+                formulation expertise and vertically integrated operations help ensure consistency and reliability.
+            </p>
+            <button class="btn btn-success">Learn More</button>
+        </div>
+    </section>
+    <!-----------CB contact section ----------------->
+    <section class=" mb-5">
+        <div class="container">
+            <div class="contact-block">
+                <div class="cb-content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" width="80" alt="icon">
+
+                    <h2 class="cb-title">Partner with us now!</h2>
+
+                    <p class="cb-text">
+                        For general inquiries, questions or more information, please reach
+                        out to us. We are here to help.
+                    </p>
+
+                    <button class="cb-btn">CONTACT US</button>
+                </div>
+
+                <!-- RIGHT IMAGE FROM YOUR URL -->
+                <img src="https://www.adm.com/globalassets/global-blocks/new_contact_us-1.png" class="cb-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-----------------footer--------------------->
+    <footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3"
+                            alt="ADM Logo"></a>
+
+                    <p class="text-light">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Market Served</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="footer-line">
+
+            <div class="text-center text-light">
+                © 2025 SubNutra All rights reserved. Developed & maintained by Inforag Technology
+            </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+ <div class="slider-container">
+
+  <!-- Slider -->
+  <div class="slide active">
+    <img src="https://sgutrade.com/wp-content/uploads/2019/05/banner_img-1200x367.jpg" alt="">
+    <div class="content-box">
+      <h1>Impact of scaling.</h1>
+      <p>
+        ADM has published its 2022 Corporate Sustainability Report,
+        highlighting many more ways we have advanced our work to feed
+        the world, protect nature and enrich lives.
+      </p>
+      <button class="learn-btn">LEARN MORE</button>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="https://sgutrade.com/wp-content/uploads/2019/05/slide3-1200x367.jpg" alt="">
+    <div class="content-box">
+      <h1>Growing With Nature.</h1>
+      <p>We bring sustainable innovation for a better tomorrow.</p>
+      <button class="learn-btn">LEARN MORE</button>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/ingredients_banner.jpg" alt="">
+    <div class="content-box">
+      <h1>Future of Agriculture.</h1>
+      <p>ADM works globally to transform natural resources responsibly.</p>
+      <button class="learn-btn">LEARN MORE</button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="slider-nav">
+    <span id="prev">&#10094;</span>
+
+    <div class="slide-count">
+      <span id="current">01</span> / <span id="total">03</span>
+    </div>
+
+    <span id="next">&#10095;</span>
+  </div>
+</div>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <div id="hamburger" class="hamburger">☰</div>
+
+            <img src="./Header-Logo.png" class="mobile-logo">
+
+            <div class="mobile-icons">
+                <span class="icon globe">🌐</span>
+                <span class="icon search-btn">🔍</span>
+            </div>
+        </div>
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Market Served</a>
+            <a href="#">Investisseurs</a>
+
+            <div class="icons">
+                <span class="icon globe">🌐</span>
+                <span class="icon search-btn">🔍</span>
+            </div>
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./Header-Logo.png" alt="ADM Logo">
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Market Served</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">Ingredients ▾</a>
+
+                    <ul class="dropdown-menu">
+                        <li>Bakery</li>
+                        <li>Confectionery</li>
+                        <li>Ice Cream & Toppings</li>
+                        <li>Beverages</li>
+                        <li>Dairy</li>
+                        <li>Health & Nutrition</li>
+                        <li>Sauces & Condiments</li>
+                        <li>Edible Fat & Other Product</li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- MOBILE SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+
+        <div class="close-btn">&times;</div>
+
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Market Served</a>
+
+        <div class="mobile-dropdown">
+            <div class="mobile-drop-btn">Ingredients ▼</div>
+            <div class="mobile-drop-content">
+                <p>Bakery</p>
+                <p>Confectionery</p>
+                <p>Ice Cream & Toppings</p>
+                <p>Beverages</p>
+                <p>Dairy</p>
+                <p>Health & Nutrition</p>
+                <p>Sauces & Condiments</p>
+                <p>Edible Fat & Other Product</p>
+            </div>
+        </div>
+
+        <a href="#">Career</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+
+    <!-- SEARCH POPUP -->
+    <div class="search-popup" id="searchPopup">
+        <div class="search-box">
+            <input type="text" placeholder="Search here...">
+            <button id="closeSearch">Close</button>
+        </div>
+    </div>
+
+    <!-- silder section -->
+    <div class="slider-container">
+
+        <!-- Slides -->
+        <div class="slide active">
+            <img src="https://sgutrade.com/wp-content/uploads/2019/05/banner_img-1200x367.jpg" alt="">
+            <div class="content-box">
+                <h1>Impact of scaling.</h1>
+                <p>
+                    ADM has published its 2022 Corporate Sustainability Report,
+                    highlighting many more ways we have advanced our work to feed
+                    the world, protect nature and enrich lives.
+                </p>
+                <button class="learn-btn">LEARN MORE</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://sgutrade.com/wp-content/uploads/2019/05/slide3-1200x367.jpg" alt="">
+            <div class="content-box">
+                <h1>Growing With Nature.</h1>
+                <p>We bring sustainable innovation for a better tomorrow.</p>
+                <button class="learn-btn">LEARN MORE</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/ingredients_banner.jpg" alt="">
+            <div class="content-box">
+                <h1>Future of Agriculture.</h1>
+                <p>ADM works globally to transform natural resources responsibly.</p>
+                <button class="learn-btn">LEARN MORE</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <!-- <div class="slider-nav">
+            <span id="prev">&#10094;</span>
+
+            <div class="slide-count">
+                <span id="current">01</span> / <span id="total">03</span>
+            </div>
+            
+            <span id="next">&#10095;</span>
+        </div> -->
+        
+    </div>
+
+    <div class="slider-nav">
+    <span id="prev">&#10094;</span>
+    <div class="slide-count">
+        <span id="current">01</span> / <span id="total">03</span>
+    </div>
+    <span id="next">&#10095;</span>
+</div>
+        <!-- hero -->
+        
+    <!-- <div>
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia perferendis facere repudiandae
+                maiores, in architecto voluptatibus sed, reiciendis recusandae sapiente quo nulla. Ratione atque nemo
+                totam tempora cumque amet repellat, natus velit labore ipsa quia asperiores at! Sit a, soluta eius est
+                quam exercitationem veritatis voluptatum maiores, corrupti reprehenderit vel quae explicabo. Nam dolores
+                earum reiciendis quisquam tenetur mollitia nihil quaerat libero est consequatur eum reprehenderit
+                eveniet officia quam officiis nobis illum, porro, sunt aliquid in? Architecto dicta quisquam praesentium
+                ea! Consectetur quibusdam distinctio, explicabo quasi repellendus quidem? Saepe quidem nulla officiis
+                laboriosam quos voluptatem deleniti natus veniam repudiandae id.</p>
+        </div>
+    </div> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+https://www.adm.com/globalassets/home-page/homepage_c6_mobile_l.png
+
+
+
+https://www.adm.com/globalassets/home-page/hp_c6v2_macro_197519511l.png
