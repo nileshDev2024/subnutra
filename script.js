@@ -1,4 +1,33 @@
-// // MOBILE MENU
+// document.addEventListener("DOMContentLoaded", () => {
+
+//   const hamburger = document.getElementById("hamburger");
+//   const sideMenu = document.getElementById("sideMenu");
+//   const closeBtn = document.querySelector(".close-btn");
+
+//   // Open side menu
+//   hamburger.onclick = () => {
+//     sideMenu.style.left = "0px";
+//   };
+
+//   // Close menu
+//   closeBtn.onclick = () => {
+//     sideMenu.style.left = "-300px";
+//   };
+
+//   // Mobile Ingredients Dropdown
+//   const dropBtn = document.querySelector(".mobile-drop-btn");
+//   const dropContent = document.querySelector(".mobile-drop-content");
+
+//   dropBtn.onclick = () => {
+//     dropContent.style.display =
+//       dropContent.style.display === "block" ? "none" : "block";
+//   };
+
+// });
+
+// MOBILE MENU
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,10 +56,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (dropBtn) {
     dropBtn.onclick = () => {
-      dropContent.style.display = 
+      dropContent.style.display =
         dropContent.style.display === "block" ? "none" : "block";
     };
   }
+
+
+  // DESKTOP DROPDOWN CLICK TOGGLE
+const desktopDropBtn = document.querySelector(".drop-btn");
+const desktopDropMenu = document.querySelector(".dropdown-menu");
+
+desktopDropBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  // Toggle dropdown
+  desktopDropMenu.style.display =
+    desktopDropMenu.style.display === "block" ? "none" : "block";
+});
+
+// Hide dropdown on outside click
+document.addEventListener("click", () => {
+  desktopDropMenu.style.display = "none";
+});
 
 
 
@@ -52,11 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let whatsappMessage = `
 
-*Name:* ${name}
-*Email:* ${email}
-*Phone:* ${phone}
-*Enquiry Type:* ${enquiry}
-*Message:* ${message}
+    *Name:* ${name}
+    *Email:* ${email}
+    *Phone:* ${phone}
+    *Enquiry Type:* ${enquiry}
+    *Message:* ${message}
       `;
 
       let url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(whatsappMessage);
@@ -91,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 
 
-// // silder js 
+// // silder js
 // let slides = document.querySelectorAll(".slide");
 // let current = 0;
 

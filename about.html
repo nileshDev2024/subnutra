@@ -1,11 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .about-sgutrade {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* LEFT PURPLE AREA (75%) */
+    .sgu-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #6f2da8;
+        width: 75%;
+        height: 80%;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 90px;
+        padding-right: 50px;
+        z-index: 2;
+    }
+
+    .sgu-content {
+        max-width: 650px;
+    }
+
+    .sgu-heading {
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .sgu-text {
+        margin-top: 28px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* RIGHT SIDE GRAIN BACKGROUND (25%) */
+    .sgu-grain {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 25%;
+        height: 80%;
+        background-image: url("https://www.adm.com/globalassets/about-adm/aboutadm_c15_bg.jpeg");
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    /* FOOD IMAGE */
+    .sgu-food {
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        transform: translateY(-50%);
+        width: 40%;
+        border-radius: 6px;
+        object-fit: cover;
+        z-index: 3;
+    }
+
+    /* RESPONSIVE FOR TABLET / MOBILE */
+    @media(max-width: 992px) {
+
+        .about-sgutrade {
+            height: auto;
+            padding-bottom: 40px;
+        }
+
+        /* IMAGE TOP FULL WIDTH */
+        .sgu-food {
+            position: relative;
+            width: 100%;
+            height: auto;
+            top: 0;
+            right: 0;
+            transform: none;
+            border-radius: 0;
+            display: block;
+        }
+
+        /* HIDE GRAIN COMPLETELY */
+        .sgu-grain {
+            display: none;
+        }
+
+        /* PURPLE BOX BELOW IMAGE */
+        .sgu-left {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 40px 25px;
+            margin-top: -5px;
+        }
+
+        .sgu-heading {
+            font-size: 40px;
+        }
+    }
+
+
+
+
+    /* Circle Image */
+    .circle-img {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    /* Overlapping Rectangle Image */
+    .rect-img {
+        width: 330px;
+        height: 420px;
+        border-radius: 8px;
+        position: relative;
+        top: 120px;
+        left: 120px;
+        z-index: 2;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .circle-img {
+            position: relative;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .rect-img {
+            position: relative;
+            left: 0;
+            top: -40px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .circle-img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .rect-img {
+            width: 250px;
+            top: -30px;
+        }
+    }
+
+
+
+    /* Green decorative line under heading */
+.green-line {
+    width: 100%;
+    height: 4px;
+    background: #39b54a;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+/* Title spacing */
+.leadership-header h1 {
+    line-height: 1.1;
+}
+
+/* Text style */
+.lead {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Bottom spacing on cards */
+.text-muted {
+    line-height: 1.4;
+}
+
+
+
+.img-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-card img {
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+.img-card:hover img {
+    transform: scale(1.1);
+}
+
+/* OVERLAY BOX */
+.img-overlay {
+    position: absolute;
+    bottom: -110%;
+    left: 0;
+   /* margin-right: 10px;
+   margin-left: 10px; */
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 15px;
+    transition: all 0.4s ease;
+}
+
+.img-card:hover .img-overlay {
+    bottom: 0;
+}
+
+</style>
+
 <body>
-    <h1>About us page</h1>
+    <header class="header">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <a href="index.html">
+                <img src="./images/Header-Logo.png" class="mobile-logo">
+            </a>
+            <div id="hamburger" class="hamburger">☰</div>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./images/Header-Logo.png" alt="ADM Logo">
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="marketserved.html">Market Served</a></li>
+
+                <!-- INGREDIENTS – NO ANCHOR TAG -->
+                <li class="dropdown">
+                    <span class="drop-btn">Ingredients ▾</span>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MOBILE SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+
+        <div class="close-btn">&times;</div>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="marketserved.html">Market Served</a>
+
+        <!-- MOBILE INGREDIENTS DROPDOWN -->
+        <div class="mobile-dropdown">
+            <div class="mobile-drop-btn">Ingredients ▼</div>
+
+            <div class="mobile-drop-content">
+                <a href="bakery.html">Bakery</a>
+                <a href="confectionery.html">Confectionery</a>
+                <a href="ice-cream.html">Ice Cream & Toppings</a>
+                <a href="beverages.html">Beverages</a>
+                <a href="dairy.html">Dairy</a>
+                <a href="health.html">Health & Nutrition</a>
+                <a href="sauces.html">Sauces & Condiments</a>
+                <a href="fat.html">Edible Fat & Other Product</a>
+            </div>
+        </div>
+
+        <a href="career.html">Career</a>
+        <a href="contact-us.html">Contact Us</a>
+    </div>
+    <!-- who is section -->
+
+    <section class="about-sgutrade">
+
+        <!-- FOOD IMAGE TOP (MOBILE) -->
+        <img src="https://www.adm.com/globalassets/about-adm/aboutadm_c15_img-1.jpeg" class="sgu-food">
+
+        <!-- LEFT PURPLE BOX -->
+        <div class="sgu-left">
+            <div class="sgu-content">
+                <h1 class="sgu-heading">Who Is Sgutrade and <br> What Do We Do?</h1>
+                <p class="sgu-text">
+                    We purchase, transport and transform crops, connecting <br>farmers to consumers, touching millions
+                    of lives daily.
+
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT BACKGROUND GRAIN -->
+        <div class="sgu-grain"></div>
+    </section>
+
+
+    <section class="quine-section">
+        <div class="container py-5">
+            <div class="row ">
+
+                <!-- LEFT SECTION -->
+                <div class="col-12 col-md-6 quine-left position-relative">
+
+                    <!-- BACKGROUND PATTERN -->
+                    <img src="https://www.adm.com/globalassets/about-adm/about_c7_bg.png" class="quine-bg img-fluid "
+                        alt="bg">
+
+                    <!-- MAIN FOOD IMAGE -->
+                    <img src="https://www.adm.com/globalassets/about-adm/about_c7_img.jpeg" class="quine-main img-fluid"
+                        alt="product">
+
+                </div>
+
+                <!-- RIGHT SECTION -->
+                <div class="col-12 col-md-6 quine-content">
+                    <h2 class="fw-bold">Nature’s Power, Unlocked</h2>
+
+                    <p>
+                        ADM partners with farmers in the world's most productive agricultural regions to support their
+                        businesses, open and maintain markets, and ensure their crops are meeting the needs of customers
+                        spanning food, feed, fuel and consumer and industrial products.
+                    </p>
+                    <!-- <p>All around the world, ADM’s team of food scientists, flavorists, chefs and other experts are
+                        reimagining what’s possible by creating and solving challenges to help you deliver what’s next
+                        in nutrition. Partner with us and we can unlock nature and enrich lives together.</p> -->
+
+                    <!-- <div class="d-flex gap-3 mt-4 flex-wrap">
+                        <button class="btn btn-dark px-4 py-2 rounded-pill">PRODUCTS</button>
+                        <button class="btn btn-outline-dark px-4 py-2 rounded-pill">CATEGORIES</button>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!----------------Meet Our Leadership Team------------------>
+   <section class="leadership-header container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <h1 class="display-4 fw-bold">Meet Our<br>Leadership<br>Team</h1>
+            <div class="green-line"></div>
+        </div>
+
+        <div class="col-lg-6">
+            <p class="lead">
+                ADM's senior leadership team dedicates itself to meeting critical needs by connecting harvest to home.
+                With their varied expertise, they support an inclusive culture that values commitment, bold action and resourcefulness.
+                Learn more about the team leading ADM into the future.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===========================
+    TITLE: SENIOR LEADERSHIP
+=========================== -->
+<section class="container mb-4">
+    <h3 class="fw-bold mb-4">Senior Leadership</h3>
+</section>
+
+
+<!-- ===========================
+    5 MEMBER ROW
+=========================== -->
+<section class="container pb-5">
+    <div class="row g-5">
+
+        <div class="col-md-3">
+            <img src="https://www.adm.com/en-us/about-adm/our-company/leadership/juan-r.-luciano/contentassets/luciano-juan_bio_3x3in_300dpi_2016-10-07.jpeg" class="img-fluid rounded">
+            <h5 class="fw-bold mt-3">Juan R. Luciano</h5>
+            <p class="text-muted small">
+                Chair of the Board of Directors<br>
+                President<br>
+                Chief Executive Officer
+            </p>
+        </div>
+
+        <div class="col-md-3">
+            <img src="https://www.adm.com/en-us/about-adm/our-company/leadership/kristy-folkwein/contentassets/folkwein-kristy_bio_3x3_300dpi_2016-09-21.jpeg" class="img-fluid rounded">
+            <h5 class="fw-bold mt-3">Christopher M. Cuddy</h5>
+            <p class="text-muted small">
+                Senior Vice President<br>
+                President, Carbohydrate Solutions<br>
+                President, North America
+            </p>
+        </div>
+
+        <div class="col-md-3">
+            <img src="https://www.adm.com/en-us/about-adm/our-company/leadership/christopher-m.-cuddy/contentassets/cuddy-chris_bio_3x3in_300dpi_2016-10-07.jpeg" class="img-fluid rounded">
+            <h5 class="fw-bold mt-3">Kristy Folkwein</h5>
+            <p class="text-muted small">
+                Senior Vice President<br>
+                Chief Information Officer
+            </p>
+        </div>
+
+        <div class="col-md-3">
+            <img src="https://www.adm.com/en-us/about-adm/our-company/leadership/kristy-folkwein/contentassets/folkwein-kristy_bio_3x3_300dpi_2016-09-21.jpeg" class="img-fluid rounded">
+            <h5 class="fw-bold mt-3">Regina Jones</h5>
+            <p class="text-muted small">
+                Senior Vice President<br>
+                Chief Legal Officer
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Real-World Outcomes -->
+
+<section class="py-5">
+    <div class="container">
+
+        <h3 class="fw-bold mb-2">Real-World Outcomes</h3>
+        <p class="text-muted small mb-4">
+            From meals for families to restoring soil health to nutrition education,
+            ADM Cares drives change, and measures results to prove impact.
+        </p>
+
+        <div class="row g-4">
+
+            <!-- CARD 1 -->
+            <div class="col-6 col-sm-6 col-md-3">
+                <div class="img-card">
+                    <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-01-c61-255x339.jpg"
+                         class="img-fluid rounded">
+
+                    <div class="img-overlay">
+                        <h5>Food Security</h5>
+                        <p>Every shared meal brings us closer to better access to food and creating stronger communities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-6 col-sm-6 col-md-3">
+                <div class="img-card">
+                    <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-02-c61-255x339.jpg"
+                         class="img-fluid rounded">
+
+                    <div class="img-overlay">
+                        <h5>Sustainability Practices</h5>
+                        <p>By improving soil health, restoring hectares, and offering training and support, we’re helping create more resilient land for future generations</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-6 col-sm-6 col-md-3">
+                <div class="img-card">
+                    <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-04-c61-255x339.jpg"
+                         class="img-fluid rounded">
+
+                    <div class="img-overlay">
+                        <h5>Farmer Resilience</h5>
+                        <p>By expanding practices that drive positive farm economics, we help strengthen the resiliency of the agriculture and food sectors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-6 col-sm-6 col-md-3">
+                <div class="img-card">
+                    <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-03-c61-255x339.jpg"
+                         class="img-fluid rounded">
+
+                    <div class="img-overlay">
+                        <h5 class="bold">Health and Well-Being</h5>
+                        <p>We’re empowering the next generation through access to wholesome meals and healthy habits.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
+
+                    <p class="text-light">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Market Served</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="footer-line">
+
+            <div class="text-center text-light">
+               © 2025 SubNutra All rights reserved. Developed & Maintained by <a href="https://inforag.com/" class="bold">Inforag Technology</a> 
+            </div> 
+    </footer>
+
+
+    <script src="script.js"></script>
+    <!-- <script>
+       
+     </script> -->
 </body>
+
 </html>
