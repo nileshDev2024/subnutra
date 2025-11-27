@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+      /* Desktop Paragraph Look */
+.icecream-sec .ice-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #444;
+}
+
+/* Heading spacing */
+.icecream-sec h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsive Adjustment */
+@media (max-width: 576px) {
+    .icecream-sec h2 {
+        font-size: 24px;
+    }
+
+    .icecream-sec .ice-text {
+        font-size: 15px;
+        line-height: 1.55;
+        padding: 0 12px;
+    }
+}
+
+      
+
+        .category-box {
+            background: #fff;
+            border-radius: 6px;
+            padding: 0;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            background: #3fb447;
+            padding: 15px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .category-items {
+            padding: 20px;
+        }
+
+        .dropdown-toggle-btn {
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .sub-list {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+
+        .equal-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <a href="index.html">
+                <img src="./images/Header-Logo.png" class="mobile-logo">
+            </a>
+            <div id="hamburger" class="hamburger">☰</div>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./images/Header-Logo.png" alt="ADM Logo">
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="marketserved.html">Market Served</a></li>
+
+                <!-- INGREDIENTS – NO ANCHOR TAG -->
+                <li class="dropdown">
+                    <span class="drop-btn">Ingredients ▾</span>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MOBILE SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+
+        <div class="close-btn">&times;</div>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="marketserved.html">Market Served</a>
+
+        <!-- MOBILE INGREDIENTS DROPDOWN -->
+        <div class="mobile-dropdown">
+            <div class="mobile-drop-btn">Ingredients ▼</div>
+
+            <div class="mobile-drop-content">
+                <a href="bakery.html">Bakery</a>
+                <a href="confectionery.html">Confectionery</a>
+                <a href="ice-cream.html">Ice Cream & Toppings</a>
+                <a href="beverages.html">Beverages</a>
+                <a href="dairy.html">Dairy</a>
+                <a href="health&Nutrition.html">Health & Nutrition</a>
+                <a href="sauces.html">Sauces & Condiments</a>
+                <a href="fat.html">Edible Fat & Other Product</a>
+            </div>
+        </div>
+
+        <a href="career.html">Career</a>
+        <a href="contact-us.html">Contact Us</a>
+    </div>
+        <!-- heading ice creams -->
+        <section class="section-block py-5">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Ice Cream & Toppings</h2>
+            <p class="section-desc">
+                Sgutrade is a leading supplier of ice cream ingredients in India and worldwide.
+                We offer an extensive selection of commercial ice cream ingredients including 
+                cocoa powders, preservatives, fibers, proteins, sweeteners, edible gums and a lot 
+                more to make delicious ice creams and toppings.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- row 1st -->
+    <div class="container py-5">
+        <div class="row g-4">
+
+            <!-- COCOA BOX -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Cocoa</div>
+
+                    <div class="category-items">
+
+                        <ul>
+                            <li>Natural Cocoa Powder</li>
+                            <li>Light Brown Cocoa Powder</li>
+                            <li>Dark Brown Cocoa Powder</li>
+                            <li>Regular Brown Cocoa Powder</li>
+                            <li>Alkalized Cocoa Powder</li>
+                            <li>DM Cocoa</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PRESERVATIVE BOX -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+                    <div class="category-header">Preservative</div>
+
+                    <div class="category-items">
+                        <ul>
+
+                            <!-- DROPDOWN #1 -->
+                            <li>
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#calcium">
+                                    Calcium Propionate ▾
+                                </span>
+                                <div id="calcium" class="collapse sub-list">
+                                    <ul>
+                                        <li>Type A</li>
+                                        <li>Type B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal simple list item -->
+                            <li class="mt-2">Sodium Propionate</li>
+
+                            <!-- DROPDOWN #2 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#potassium">
+                                    Potassium Sorbet ▾
+                                </span>
+                                <div id="potassium" class="collapse sub-list">
+                                    <ul>
+                                        <li>Grade 1</li>
+                                        <li>Grade 2</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal item -->
+                            <li class="mt-2">Sorbic Acid</li>
+                            <li class="mt-2">Sodium Benzoate</li>
+
+                            <!-- DROPDOWN #3 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#pgms">
+                                    PGMS ▾
+                                </span>
+                                <div id="pgms" class="collapse sub-list">
+                                    <ul>
+                                        <li>PGMS High Quality</li>
+                                        <li>PGMS Low Quality</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- DROPDOWN #4 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#datem">
+                                    Datem ▾
+                                </span>
+                                <div id="datem" class="collapse sub-list">
+                                    <ul>
+                                        <li>Datem A</li>
+                                        <li>Datem B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- DROPDOWN #5 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#dmg">
+                                    DMG ▾
+                                </span>
+                                <div id="dmg" class="collapse sub-list">
+                                    <ul>
+                                        <li>DMG 50%</li>
+                                        <li>DMG 90%</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- row 2nd -->
+    <!--  -->
+    <div class="container py-3">
+        <div class="row g-4">
+
+            <!-- Dietary Fibers -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Cocoa</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <li>Polydextrose</li>
+                            <li>Soy Fiber</li>
+                            <li>Gum Acacia</li>
+                            <li>Fructose</li>
+                            <li>Oat Fiber</li>
+                            <li>Wheat Fiber</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Emulsifier -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Emulsifier</div>
+
+                    <div class="category-items">
+                        <ul>
+
+                            <li class="mt-2">Non GMO Soya Lecithin Powder</li>
+                            <li class="mt-2">Non GMO Soya Lyso Lecithin Powder</li>
+                            <li class="mt-2">Non GMO Sunflower Lecithin Powder</li>
+                            <li class="mt-2">Non GMO Sunflower Lyso Lecithin Powder</li>
+                            <li class="mt-2">Non GMO Soya Lecithin Liquid</li>
+                            <li class="mt-2">Non GMO Soya Lyso Lecithin Liquid</li>
+                            <li class="mt-2">Non GMO Sunflower Lecithin Liquid</li>
+                            <li class="mt-2">Non GMO Sunflower Lyso Lecithin Liquid</li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- row 3rd -->
+    <div class="container py-3">
+        <div class="row g-4">
+
+            <!-- Other Proteins -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Other Proteins</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <li>Vital wheat gluten (VWG)</li>
+                            <li>Sweet Whey Powder (SWP)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Protein -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Protein</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <!-- DROPDOWN #1 -->
+                            <li>
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#SoyProtein">
+                                    Soya Protein Isolate 90 % ▾
+                                </span>
+                                <div id="SoyaProtein" class="collapse sub-list">
+                                    <ul>
+                                        <li>Type A</li>
+                                        <li>Type B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal simple list item -->
+                            <li class="mt-2">Soya Protein Concentrate</li>
+                            <li class="mt-2">Functional Whey Protein Concentrate 80 %</li>
+                            <li class="mt-2">Instant Whey Protein Concentrate 80 %</li>
+                            <li class="mt-2">Whey Protein Isolate</li>
+                            <li class="mt-2">Pea Protein Isolate</li>
+
+                            <!-- DROPDOWN #2 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#VWG">
+                                    VWG ▾
+                                </span>
+                                <div id="VWG" class="collapse sub-list">
+                                    <ul>
+                                        <li>Grade 1</li>
+                                        <li>Grade 2</li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- row 4th -->
+    <div class="container py-3">
+        <div class="row g-4">
+
+            <!-- Sweetener & Polyol -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Sweetener & Polyol</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <li>Fructose</li>
+                            <li>Monk Fruit Extract</li>
+                            <li>Maltitol</li>
+                            <li>Acesulfame K</li>
+                            <li>Sucralose</li>
+                            <li>Stevia</li>
+                            <li>Aspartame</li>
+                            <li>Neotame</li>
+                            <li>Xylitol</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Gums/Thickening Agent -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Gums/Thickening Agente</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <!-- DROPDOWN #1 -->
+                            <li>
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#XanthanGum">
+                                    Xanthan Gum ▾
+                                </span>
+                                <div id="XanthanGum" class="collapse sub-list">
+                                    <ul>
+                                        <li>Type A</li>
+                                        <li>Type B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal simple list item -->
+                            <li class="mt-2">Guar Gum</li>
+                            <li class="mt-2">Carrageenan (Dairy Grade)</li>
+                            <li class="mt-2">Pectin Jam Grade</li>
+                            <li class="mt-2">Whey Protein Isolate</li>
+                            <li class="mt-2">Pectin Jelly Grade</li>
+
+                            <!-- DROPDOWN #2 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#IICollagen">
+                                    Type II Collagen ▾
+                                </span>
+                                <div id="IICollagen" class="collapse sub-list">
+                                    <ul>
+                                        <li>Grade 1</li>
+                                        <li>Grade 2</li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
+
+                    <p class="text-light">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About US</a></li>
+                        <li><a href="marketserved.html">Market Served</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream and Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="dairy.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="footer-line">
+<div class="text-center text-light copyright">
+               © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/" class="fw-bold text-decoration-none text-white">Inforag Technology</a> 
+            </div>  
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

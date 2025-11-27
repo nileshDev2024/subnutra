@@ -126,11 +126,83 @@
 
     </style>
 </head>
+<link rel="stylesheet" href="style.css">
 
 <body>
+<header class="header">
 
+    <!-- MOBILE HEADER -->
+    <div class="mobile-header">
+        <a href="index.html">
+            <img src="./images/Header-Logo.png" class="mobile-logo">
+        </a>
+        <div id="hamburger" class="hamburger">☰</div>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="./images/Header-Logo.png" alt="ADM Logo">
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="marketserved.html">Market Served</a></li>
+
+            <!-- INGREDIENTS – NO ANCHOR TAG -->
+            <li class="dropdown">
+                <span class="drop-btn">Ingredients ▾</span>
+
+                <ul class="dropdown-menu">
+                    <li><a href="bakery.html">Bakery</a></li>
+                    <li><a href="confectionery.html">Confectionery</a></li>
+                    <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                    <li><a href="beverages.html">Beverages</a></li>
+                    <li><a href="dairy.html">Dairy</a></li>
+                    <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                    <li><a href="sauces.html">Sauces & Condiments</a></li>
+                    <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                </ul>
+            </li>
+
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- MOBILE SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+
+    <div class="close-btn">&times;</div>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="marketserved.html">Market Served</a>
+
+    <!-- MOBILE INGREDIENTS DROPDOWN -->
+    <div class="mobile-dropdown">
+        <div class="mobile-drop-btn">Ingredients ▼</div>
+
+        <div class="mobile-drop-content">
+            <a href="bakery.html">Bakery</a>
+            <a href="confectionery.html">Confectionery</a>
+            <a href="ice-cream.html">Ice Cream & Toppings</a>
+            <a href="beverages.html">Beverages</a>
+            <a href="dairy.html">Dairy</a>
+            <a href="health&Nutrition.html">Health & Nutrition</a>
+            <a href="sauces.html">Sauces & Condiments</a>
+            <a href="fat.html">Edible Fat & Other Product</a>
+        </div>
+    </div>
+
+    <a href="career.html">Career</a>
+    <a href="contact-us.html">Contact Us</a>
+</div>
     <!-- HERO SECTION -->
-    <section class="market-hero d-flex align-items-center">
+    <!-- <section class="market-hero d-flex align-items-center">
         <div class="container text-center">
             <h1 class="fw-bold">Markets We Serve</h1>
             <p class="lead mt-3">
@@ -138,13 +210,13 @@
             </p>
             <a href="#contact" class="btn hero-btn mt-4">Request a Quote</a>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- MARKETS GRID -->
     <section class="container market-grid py-5">
 
-        <h2 class="section-title text-center mb-4">Industries We Serve</h2>
+        <h2 class="section-title text-center mb-4">Markets We Serve</h2>
 
         <div class="row g-4">
 
@@ -159,7 +231,7 @@
 
             <div class="col-md-4">
                 <div class="market-card">
-                    <img src="images/confectionery.jpg" alt="Confectionery">
+                    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/marker_serv2.jpg" alt="Confectionery">
                     <h3>Confectionery</h3>
                     <p>Solutions for candies, chocolates, coating, gum and sweet applications.</p>
                 </div>
@@ -167,7 +239,7 @@
 
             <div class="col-md-4">
                 <div class="market-card">
-                    <img src="images/dairy.jpg" alt="Dairy">
+                    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/marker_serv15.jpg" alt="Dairy">
                     <h3>Dairy</h3>
                     <p>Ingredients that improve texture, stability and nutrition in dairy products.</p>
                 </div>
@@ -175,7 +247,7 @@
 
             <div class="col-md-4">
                 <div class="market-card">
-                    <img src="images/beverages.jpg" alt="Beverages">
+                    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/marker_serv15.jpg" alt="Beverages">
                     <h3>Beverages</h3>
                     <p>Stabilizers and functional solutions for juices, drinks and healthy beverages.</p>
                 </div>
@@ -183,7 +255,7 @@
 
             <div class="col-md-4">
                 <div class="market-card">
-                    <img src="images/icecream.jpg" alt="Ice Cream">
+                    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/icecream4.jpg" alt="Ice Cream">
                     <h3>Ice-Cream</h3>
                     <p>Enhancing creaminess, mouthfeel and melting resistance for ice-cream manufacturers.</p>
                 </div>
@@ -191,7 +263,7 @@
 
             <div class="col-md-4">
                 <div class="market-card">
-                    <img src="images/savory.jpg" alt="Savory">
+                    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/marker_serv16.jpg" alt="Savory">
                     <h3>Savory</h3>
                     <p>Solutions for soups, sauces, snacks, seasonings and ready-to-eat meals.</p>
                 </div>
@@ -261,7 +333,7 @@
 
 
     <!-- CONTACT CTA -->
-    <section class="contact-cta py-5" id="contact">
+    <section class="contact-cta py-5 mb-5" id="contact">
         <div class="container text-center">
 
             <h2 class="section-title text-white mb-3">Need Samples or Business Query?</h2>
@@ -274,6 +346,93 @@
         </div>
     </section>
 
+
+    <!-- footer -->
+      <footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
+
+                    <p class="text-light">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About US</a></li>
+                        <li><a href="marketserved.html">Market Served</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream and Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="dairy.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="footer-line">
+
+           <div class="text-center text-light copyright">
+               © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/" class="fw-bold text-decoration-none text-white">Inforag Technology</a> 
+            </div> 
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

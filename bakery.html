@@ -5,7 +5,384 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+ /* Main Left Blue Box */
+.content-box {
+    background: #0023a5;
+    min-height: 531px;
+    position: relative;
+    z-index: 2;
+}
+
+.content-wrapper h1 {
+    font-size: 45px;
+    line-height: 1.1;
+}
+
+.content-wrapper p {
+    font-size: 18px;
+    max-width: 620px;
+}
+
+/* Right Area */
+.right-side {
+    position: relative;
+    overflow: visible;
+}
+
+/* Background Image */
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Foreground Dog Image (Desktop Overlap) */
+.front-img {
+    width: 85%;
+    max-width: 500px;
+    position: absolute;
+    left: -30%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    border-radius: 3px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* ------------------- RESPONSIVE ------------------ */
+
+/* Tablet */
+@media (max-width: 991px) {
+
+    .content-wrapper {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .content-wrapper h1 {
+        font-size: 36px;
+    }
+
+    .front-img {
+        position: relative;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40px;       /* slight premium overlap */
+    }
+
+    .bg-img {
+        height: 260px;
+        object-fit: cover;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .content-box {
+       min-height: 100%;
+    }
+    .content-wrapper h1 {
+        font-size: 30px;
+    }
+
+    .content-wrapper p {
+        font-size: 15px;
+    }
+
+    .front-img {
+        margin-top: -50px;   /* beautiful overlap */
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .bg-img {
+        height: 220px;
+    }
+}
+
+/* Banner Image */
+.bakery-banner {
+    height: 450px;
+    background: url("https://sgutrade.com/wp-content/themes/subnutra/assets/images/ingredients_banner.jpg") center/cover no-repeat;
+
+}
+.bakery-banner h1{
+    color: black;
+}
+.bakery-banner p{
+    color: black;
+}
+/* Product Card */
+.product-card {
+    background: #fff;
+    padding: 20px;
+    height: 450px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Product Image */
+.product-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bakery-banner {
+        height: 250px;
+    }
+}
+
+</style>
 <body>
-    
+   <header class="header">
+
+    <!-- MOBILE HEADER -->
+    <div class="mobile-header">
+        <a href="index.html">
+            <img src="./images/Header-Logo.png" class="mobile-logo">
+        </a>
+        <div id="hamburger" class="hamburger">☰</div>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="./images/Header-Logo.png" alt="ADM Logo">
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="marketserved.html">Market Served</a></li>
+
+            <!-- INGREDIENTS – NO ANCHOR TAG -->
+            <li class="dropdown">
+                <span class="drop-btn">Ingredients ▾</span>
+
+                <ul class="dropdown-menu">
+                    <li><a href="bakery.html">Bakery</a></li>
+                    <li><a href="confectionery.html">Confectionery</a></li>
+                    <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                    <li><a href="beverages.html">Beverages</a></li>
+                    <li><a href="dairy.html">Dairy</a></li>
+                    <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                    <li><a href="sauces.html">Sauces & Condiments</a></li>
+                    <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                </ul>
+            </li>
+
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- MOBILE SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+
+    <div class="close-btn">&times;</div>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="marketserved.html">Market Served</a>
+
+    <!-- MOBILE INGREDIENTS DROPDOWN -->
+    <div class="mobile-dropdown">
+        <div class="mobile-drop-btn">Ingredients ▼</div>
+
+        <div class="mobile-drop-content">
+            <a href="bakery.html">Bakery</a>
+            <a href="confectionery.html">Confectionery</a>
+            <a href="ice-cream.html">Ice Cream & Toppings</a>
+            <a href="beverages.html">Beverages</a>
+            <a href="dairy.html">Dairy</a>
+            <a href="health&Nutrition.html">Health & Nutrition</a>
+            <a href="sauces.html">Sauces & Condiments</a>
+            <a href="fat.html">Edible Fat & Other Product</a>
+        </div>
+    </div>
+
+    <a href="career.html">Career</a>
+    <a href="contact-us.html">Contact Us</a>
+</div>
+<!-- hero-barkery -->
+<section class="pet-nutrition-section">
+    <div class="container-fluid p-0">
+        <div class="row g-0 align-items-center">
+
+            <!-- LEFT BLUE CONTENT -->
+            <div class="col-lg-7 content-box text-white d-flex align-items-center">
+                <div class="content-wrapper px-4 px-lg-5">
+                    <h1 class="fw-bold">Bakery Products</h1>
+                    <p class="lead">
+                        Create the pet nutrition products of tomorrow with Sgutrade <br> team of
+                        cross-functional pet nutrition experts and our <br>full pantry of pet
+                        ingredient solutions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-5 right-side position-relative">
+
+                <!-- Background Image -->
+                <img src="https://www.adm.com/globalassets/products--services/pet-nutrition/02-c15-397x305.jpg"
+                     class="bg-img" alt="background">
+
+                <!-- Foreground Dog Image -->
+                <img src="https://www.adm.com/globalassets/products--services/pet-nutrition/01-c15-540x305.jpg"
+                     class="front-img" alt="dog">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- products section -->
+ <section class="bakery-banner d-flex align-items-center text-center text-white">
+        <div class="container">
+            <h1 class="fw-bold display-4 ">Fresh Bakery Products</h1>
+            <p class="lead mt-3">Made with love, served with freshness.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <section class="container py-4">
+        <h2 class="text-center fw-bold mb-4">Ice Cream & Toppings</h2>
+
+        <div class="row g-4">
+
+            <!-- Product Card 1 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="product-img" />
+                    <h4 class="mt-3 fw-bold">Fresh Bread</h4>
+                    <p>Soft, fresh & homemade bread baked daily.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/Candy-Confections.jpg" class="product-img" />
+                    <h4 class="mt-3 fw-bold">Chocolate Cake</h4>
+                    <p>Rich, creamy and loaded with real chocolate.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://sgutrade.com/wp-content/themes/subnutra/assets/images/Ice-Cream.jpg" class="product-img" />
+                    <h4 class="mt-3 fw-bold">Cupcakes</h4>
+                    <p>Delicious cupcakes with different flavors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer-->
+    <footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
+
+                    <p class="text-light">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About US</a></li>
+                        <li><a href="marketserved.html">Market Served</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream and Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="dairy.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="footer-line">
+            <div class="text-center text-light copyright">
+               © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/" class="fw-bold text-decoration-none text-white">Inforag Technology</a> 
+            </div>  
+    </footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>

@@ -38,10 +38,12 @@
   align-items: center;
   padding: 16px 60px;
   background: #42ab46;
+  /* background-color: #000; */
 }
 
 .logo img {
   max-width: 180px;
+  /* max-width: 140px; */
   width: 100%;
   height: auto;
 }
@@ -548,45 +550,9 @@ text-align: left;
 
 
 /* -----------------------procurement section----------------- */
-.proc-circle{
-margin: auto;
-}
-.proc-number {
-    font-size: 48px;
-    font-weight: 700;
-    color: #0078b7;
-    margin-bottom: 10px;
-}
-
-.proc-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #000;
-    text-align: center;
-}
-
-
-.proc-desc {
-    font-size: 14px;
-    color: #555;
-    max-width: 280px;
-    margin: auto;
-}
-
-/* Mobile adjustments */
-@media (max-width: 576px) {
-    .proc-number {
-        font-size: 36px;
-    }
-    .proc-circle{
-      text-align: left;
-    }
-    .proc-title {
-        font-size: 18px;
-        text-align: left;
-    }
-}
+/* =====================
+   PROCESS SECTION CSS
+===================== */
 
 .proc-circle {
     width: 110px;
@@ -599,18 +565,68 @@ margin: auto;
     color: #fff;
     font-size: 32px;
     font-weight: 700;
-    /* margin: auto; */
+    margin: auto;        /* Desktop – Center */
+}
+
+.proc-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0078b7;
+    margin-bottom: 10px;
 }
 
 .proc-title {
-    margin-top: 15px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #000;
+    text-align: center;  /* Desktop – Center */
+}
+
+.proc-desc {
+    font-size: 14px;
+    color: #555;
+    max-width: 280px;
+    margin: auto;
+    text-align: center;
 }
 
 
-/************** RESPONSIVE FIXES **************/
+/* =====================
+   RESPONSIVE FIXES
+===================== */
+
+/* Mobile View (Left Align) */
+@media (max-width: 576px) {
+
+    .proc-circle {
+        width: 90px;
+        height: 90px;
+        font-size: 26px;
+        margin: 0;           /* remove centering */
+        margin-left: 0;      /* force left */
+    }
+
+    .proc-title {
+        font-size: 18px;
+        text-align: left;    /* title left */
+    }
+
+    .proc-desc {
+        text-align: left;    /* description left */
+        margin-left: 0;
+    }
+
+    .proc-number {
+        font-size: 36px;
+    }
+}
+
+
+/* Tablet & Small Laptop Fixes */
 @media (max-width: 992px) {
+
     .position-lg-absolute {
         position: static !important;
         transform: none !important;
@@ -620,17 +636,6 @@ margin: auto;
     .adm-box {
         width: 100%;
         margin-top: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .adm-title {
-        font-size: 26px;
-    }
-    .proc-circle {
-        width: 90px;
-        height: 90px;
-        font-size: 26px;
     }
 }
 /* --------------- human nutritaion section------------- */
@@ -1326,5 +1331,44 @@ margin: auto;
         position: static;
         margin: 30px auto 0;
         display: block;
+    }
+}
+
+
+/* interigent */
+/* COMMON SECTION WRAPPER */
+.section-block {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* COMMON TITLE */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+/* COMMON PARAGRAPH */
+.section-desc {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-desc {
+        font-size: 15px;
+        line-height: 1.55;
+        padding: 0 12px;
     }
 }
