@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+         /* MAIN WRAPPER */
+        .sgu-hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* LEFT PURPLE AREA (75%) */
+        .sgu-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #6f2da8;
+            width: 75%;
+            height: 80%;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 90px;
+            padding-right: 50px;
+            z-index: 2;
+        }
+
+        .sgu-content {
+            max-width: 650px;
+        }
+
+        .sgu-heading {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .sgu-text {
+            margin-top: 28px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* RIGHT SIDE GRAIN BACKGROUND (25%) */
+        .sgu-grain {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25%;
+            height: 80%;
+            background-image: url("https://images.unsplash.com/photo-1702742803242-2ffd88953909?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAzfHxJbmdyZWRpZW50fGVufDB8fDB8fHww");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;     
+        }
+
+        /* FOOD IMAGE */
+        .sgu-food {
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 40%;
+            border-radius: 6px;
+            object-fit: cover;
+            z-index: 3;
+        }
+
+        /* RESPONSIVE FOR TABLET / MOBILE */
+        @media(max-width: 992px) {
+
+            .sgu-hero {
+                height: auto;
+                padding-bottom: 40px;
+            }
+
+            /* IMAGE TOP FULL WIDTH */
+            .sgu-food {
+                position: relative;
+                width: 100%;
+                height: auto;
+                top: 0;
+                right: 0;
+                transform: none;
+                border-radius: 0;
+                display: block;
+            }
+
+            /* HIDE GRAIN COMPLETELY */
+            .sgu-grain {
+                display: none;
+            }
+
+            /* PURPLE BOX BELOW IMAGE */
+            .sgu-left {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 40px 25px;
+                margin-top: -5px;
+            }
+
+            .sgu-heading {
+                font-size: 40px;
+            }
+        }
+        
+
+        /* Feautred section */
+        /* ICON COLORS */
+    .icon-human { color: #22c55e; } /* green */
+    .icon-animal { color: #3b82f6; } /* blue */
+    .icon-industrial { color: #facc15; } /* yellow */
+    .icon-pet { color: #38bdf8; } /* light blue */
+    .icon-services { color: #a855f7; } /* purple */
+
+    /* ICON STYLE */
+    .feature-icon {
+      font-size: 2rem;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    /* CARD STYLE */
+    .feature-card {
+      margin-bottom: 30px;
+    }
+
+    /* IMAGE WITH DECORATIVE FRAME */
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+    .image-wrapper::after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      width: 100%;
+      height: 100%;
+      border: 8px solid #4B0082; /* dark purple frame */
+      z-index: -1;
+    }
+
+    /* READ MORE LINK */
+    .read-more {
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .read-more i {
+      margin-left: 4px;
+    }
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header class="header">
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <a href="index.html">
+                <img src="./images/Header-Logo.png" class="mobile-logo">
+            </a>
+            <div id="hamburger" class="hamburger">☰</div>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./images/Header-Logo.png" alt="ADM Logo">
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="marketserved.html">Market Served</a></li>
+
+                <!-- INGREDIENTS – NO ANCHOR TAG -->
+                <li class="dropdown">
+                    <span class="drop-btn"><a href="ingredients.html" class="text-decoration-none">Ingredients</a> ▾</span>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice Cream & Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="fat.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="career.html">Career</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MOBILE SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+
+        <div class="close-btn">&times;</div>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="marketserved.html">Market Served</a>
+
+        <!-- MOBILE INGREDIENTS DROPDOWN -->
+        <div class="mobile-dropdown">
+            <div class="mobile-drop-btn"><a href="" class="text-decoration-none">Ingredients</a>▼</div>
+
+            <div class="mobile-drop-content">
+                <a href="bakery.html">Bakery</a>
+                <a href="confectionery.html">Confectionery</a>
+                <a href="ice-cream.html">Ice Cream & Toppings</a>
+                <a href="beverages.html">Beverages</a>
+                <a href="dairy.html">Dairy</a>
+                <a href="health&Nutrition.html">Health & Nutrition</a>
+                <a href="sauces.html">Sauces & Condiments</a>
+                <a href="fat.html">Edible Fat & Other Product</a>
+            </div>
+        </div>
+
+        <a href="career.html">Career</a>
+        <a href="contact-us.html">Contact Us</a>
+    </div>
+     <section class="sgu-hero">
+    <!-- FOOD IMAGE TOP (MOBILE) -->
+    <img src="https://plus.unsplash.com/premium_photo-1661266841331-e2169199de65?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI5fHxiYWtlcnklMjBwcm9kdWN0c3xlbnwwfHwwfHx8MA%3D%3D" class="sgu-food">
+
+    <!-- LEFT PURPLE BOX -->
+    <div class="sgu-left">
+        <div class="sgu-content">
+            <h1 class="sgu-heading">Better Ingredients. Better Food.</h1>
+            <p class="sgu-text">
+                Delivering natural solutions that empower your business and drive growth worldwide.
+            </p>
+        </div>
+    </div>
+
+    <!-- RIGHT BACKGROUND GRAIN -->
+    <div class="sgu-grain"></div>
+</section>
+
+<section class="py-1">
+  <div class="container">
+    <div class="row align-items-start">
+
+      <!-- Left Column: Text + Image -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-3">Explore Our Ingredient Solutions</h2>
+        <p class="mb-4">Boost your business with high-quality ingredients and innovative solutions for bakery, confectionery, beverages, dairy, and more.</p>
+        <div class="image-wrapper">
+          <img src="https://www.adm.com/globalassets/products--services/prodserv_c37_img.jpg" alt="Food Image" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <!-- Right Column: Ingredient Cards -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+
+          <!-- Bakery -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-cup-hot mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Bakery</h5>
+              <p>Emulsifiers, leavening agents, chocolate, cocoa powders, fats, and stabilizers for baked goods.</p>
+              <a href="bakery.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Confectionery -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-emoji-smile mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Confectionery</h5>
+              <p>Sugars, chocolates, flavors, colors, and fillings for candies and sweets.</p>
+              <a href="confectionery.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Ice Cream & Toppings -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-snow mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Ice-Cream & Toppings</h5>
+              <p>Creams, stabilizers, flavors, chocolate, nuts, and fruit toppings for frozen desserts.</p>
+              <a href="ice-cream.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Beverages -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-droplet mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Beverages</h5>
+              <p>Flavors, syrups, extracts, and functional ingredients for juices, soft drinks, and health drinks.</p>
+              <a href="beverages.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Dairy -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-cup-straw mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Dairy</h5>
+              <p>Milk powders, whey, cream, butter, and cultures for dairy products and cheese.</p>
+              <a href="dairy.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Health & Nutrition -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-heart-pulse mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Health & Nutrition</h5>
+              <p>Vitamins, minerals, proteins, fibers, and functional blends for health-focused products.</p>
+              <a href="health&Nutrition.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Sauces & Condiments -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-bucket mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Sauces & Condiments</h5>
+              <p>Flavors, thickeners, preservatives, and colorings for sauces, dressings, and condiments.</p>
+              <a href="sauces.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Edible Fat & Other Products -->
+          <div class="col-md-6 col-lg-6">
+            <div class="feature-card text-center h-100 p-3 border rounded shadow-sm">
+              <i class="bi bi-droplet-half mb-3" style="font-size:2rem; color:#0078b7;"></i>
+              <h5 class="fw-bold">Edible Fat & Other Products</h5>
+              <p>Vegetable oils, margarine, shortening, and specialty fats for food applications.</p>
+              <a href="dairy.html" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-----------CB contact section ----------------->
+    <section class="mt-3 mb-5">
+        <div class="container">
+            <div class="contact-block">
+                <div class="cb-content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" width="80" alt="icon">
+
+                    <h2 class="cb-title">Partner with us now!</h2>
+
+                    <p class="cb-text">
+                        For general inquiries, questions or more information, please reach
+                        out to us. We are here to help.
+                    </p>
+
+                    <button class="cb-btn"><a href="contact-us.html" class="text-decoration-none">CONTACT US</a></button>
+                </div>
+
+                <!-- RIGHT IMAGE FROM YOUR URL -->
+                <img src="https://www.adm.com/globalassets/global-blocks/new_contact_us-1.png" class="cb-photo">
+            </div>
+        </div>
+    </section>
+  <footer class="adm-footer pt-5 pb-4">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Logo + About -->
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3"
+                            alt="ADM Logo"></a>
+
+                    <p class="text-light">
+                        SGU Trade is committed to providing top-quality ingredients and solutions
+                        that improve lives and empower industries globally.
+                    </p>
+
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-2">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="marketserved.html">Market Served</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Ingredients</h5>
+                    <ul class="footer-links">
+                        <li><a href="bakery.html">Bakery</a></li>
+                        <li><a href="confectionery.html">Confectionery</a></li>
+                        <li><a href="ice-cream.html">Ice-Cream and Toppings</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                        <li><a href="dairy.html">Dairy</a></li>
+                        <li><a href="health&Nutrition.html">Health & Nutrition</a></li>
+                        <li><a href="sauces.html">Sauces & Condiments</a></li>
+                        <li><a href="dairy.html">Edible Fat & Other Product</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="footer-title">Contact</h5>
+
+                    <div class="footer-contact">
+
+                        <div class="contact-item address">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>
+                                SGU Trade Pvt Ltd. G-No.9/2, Mangal Compound, Behind Jaguar Showroom,
+                                Near Mittal Toll Kanta, Dewas Naka, Lasudia Mori, Indore,
+                                Madhya Pradesh 452010, India
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@sgutrade.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+91-731-2550350</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-line">
+
+            <div class="text-center text-light copyright">
+                © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/"
+                    class="fw-bold text-decoration-none text-white">Inforag Technology</a>
+            </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

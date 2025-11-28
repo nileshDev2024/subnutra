@@ -18,11 +18,12 @@
   padding: 12px 18px;
   align-items: center;
   justify-content: space-between;
-  background: #42ab46;
+  background-color: #000;
 }
 
 .mobile-logo {
-  max-width: 150px;
+  max-width: 100px;
+  padding-bottom: 10px;
 }
 
 .hamburger {
@@ -37,15 +38,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 60px;
-  background: #42ab46;
-  /* background-color: #000; */
+  background-color: #000;
 }
 
 .logo img {
   max-width: 180px;
-  /* max-width: 140px; */
   width: 100%;
-  height: auto;
+  height: 70px;
+  padding-bottom: 15px;
 }
 
 .menu {
@@ -55,12 +55,31 @@
   margin-top: 10px;
 }
 
+/* ===== HOVER UNDERLINE EFFECT ===== */
 .menu a {
+  position: relative;
   text-decoration: none;
   color: white;
   font-size: 17px;
   font-weight: 500;
+  padding-bottom: 3px;
 }
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width .3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+/* ===== END UNDERLINE EFFECT ===== */
 
 /* Ingredients main button */
 .drop-btn {
@@ -75,17 +94,6 @@
   position: relative;
 }
 
-/* .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 35px;
-  background: white;
-  width: 230px;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  padding: 12px;
-  list-style: none;
-} */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -98,11 +106,6 @@
   list-style: none;
   z-index: 999;
 }
-
-
-/* .dropdown:hover .dropdown-menu {
-  display: block;
-} */
 
 .dropdown-menu li a {
   text-decoration: none;
@@ -141,6 +144,20 @@
 }
 
 /* MOBILE DROPDOWN */
+.mobile-drop-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.mobile-drop-btn a {
+  flex: 0;
+  margin-left: 5px;
+}
+
 .mobile-dropdown {
   margin-top: 10px;
 }
@@ -184,11 +201,11 @@
 
 /* Mobile logo sizes */
 @media(max-width: 600px){
-  .mobile-logo { max-width: 160px; }
+  .mobile-logo { max-width: 100px; }
 }
 
 @media(max-width: 400px){
-  .mobile-logo { max-width: 120px; }
+  .mobile-logo { max-width: 100px; }
 }
 
 
@@ -697,6 +714,8 @@ text-align: left;
 
 .footer-logo {
     max-width: 180px;
+    /* width: 100%; */
+    height: 60px;
 }
 
 /* List */
@@ -1372,3 +1391,152 @@ text-align: left;
         padding: 0 12px;
     }
 }
+
+
+
+/* ingrident */
+.category-box {
+            background: #fff;
+            border-radius: 6px;
+            padding: 0;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            background: #3fb447;
+            padding: 15px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .category-items {
+            padding: 20px;
+        }
+
+        /* .dropdown-toggle-btn {
+            font-weight: 600;
+            cursor: pointer;
+        } */
+        .dropdown-toggle-btn {
+            font-weight: normal !important;
+            cursor: pointer;
+        }
+
+        .sub-list {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+
+        .equal-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* ingrdient hero section */
+         /* MAIN WRAPPER */
+        .sgu-hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* LEFT PURPLE AREA (75%) */
+        .sgu-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #6f2da8;
+            width: 75%;
+            height: 80%;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 90px;
+            padding-right: 50px;
+            z-index: 2;
+        }
+
+        .sgu-content {
+            max-width: 650px;
+        }
+
+        .sgu-heading {
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .sgu-text {
+            margin-top: 28px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* RIGHT SIDE GRAIN BACKGROUND (25%) */
+        .sgu-grain {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25%;
+            height: 80%;
+            background-image: url("https://www.adm.com/globalassets/products--services/human-nutrition/hn_c15_pattern.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        /* FOOD IMAGE */
+        .sgu-food {
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 40%;
+            border-radius: 6px;
+            object-fit: cover;
+            z-index: 3;
+        }
+
+        /* RESPONSIVE FOR TABLET / MOBILE */
+        @media(max-width: 992px) {
+
+            .sgu-hero {
+                height: auto;
+                padding-bottom: 40px;
+            }
+
+            /* IMAGE TOP FULL WIDTH */
+            .sgu-food {
+                position: relative;
+                width: 100%;
+                height: auto;
+                top: 0;
+                right: 0;
+                transform: none;
+                border-radius: 0;
+                display: block;
+            }
+
+            /* HIDE GRAIN COMPLETELY */
+            .sgu-grain {
+                display: none;
+            }
+
+            /* PURPLE BOX BELOW IMAGE */
+            .sgu-left {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 40px 25px;
+                margin-top: -5px;
+            }
+
+            .sgu-heading {
+                font-size: 40px;
+            }
+        }

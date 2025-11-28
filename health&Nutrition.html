@@ -7,111 +7,9 @@
     <title>Winning Nutrition Solutions</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        /* MAIN WRAPPER */
-        .sgu-hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        /* LEFT PURPLE AREA (75%) */
-        .sgu-left {
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: #6f2da8;
-            width: 75%;
-            height: 80%;
-            color: white;
-            display: flex;
-            align-items: center;
-            padding-left: 90px;
-            padding-right: 50px;
-            z-index: 2;
-        }
-
-        .sgu-content {
-            max-width: 650px;
-        }
-
-        .sgu-heading {
-            font-size: 55px;
-            font-weight: 700;
-            line-height: 1.1;
-        }
-
-        .sgu-text {
-            margin-top: 28px;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        /* RIGHT SIDE GRAIN BACKGROUND (25%) */
-        .sgu-grain {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 25%;
-            height: 80%;
-            background-image: url("https://www.adm.com/globalassets/products--services/human-nutrition/hn_c15_pattern.jpg");
-            background-size: cover;
-            background-position: center;
-            z-index: 1;     
-        }
-
-        /* FOOD IMAGE */
-        .sgu-food {
-            position: absolute;
-            top: 40%;
-            right: 5%;
-            transform: translateY(-50%);
-            width: 40%;
-            border-radius: 6px;
-            object-fit: cover;
-            z-index: 3;
-        }
-
-        /* RESPONSIVE FOR TABLET / MOBILE */
-        @media(max-width: 992px) {
-
-            .sgu-hero {
-                height: auto;
-                padding-bottom: 40px;
-            }
-
-            /* IMAGE TOP FULL WIDTH */
-            .sgu-food {
-                position: relative;
-                width: 100%;
-                height: auto;
-                top: 0;
-                right: 0;
-                transform: none;
-                border-radius: 0;
-                display: block;
-            }
-
-            /* HIDE GRAIN COMPLETELY */
-            .sgu-grain {
-                display: none;
-            }
-
-            /* PURPLE BOX BELOW IMAGE */
-            .sgu-left {
-                position: relative;
-                width: 100%;
-                height: auto;
-                padding: 40px 25px;
-                margin-top: -5px;
-            }
-
-            .sgu-heading {
-                font-size: 40px;
-            }
-        }
+       
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -299,16 +197,16 @@
     </section>
     <!-- -------ds solution----- -->
 
-    <section class="ds-wrap">
+    <!-- <section class="ds-wrap"> -->
 
         <!-- Image Section -->
-        <div class="ds-image-box">
+        <!-- <div class="ds-image-box">
             <img src="https://www.adm.com/globalassets/products--services/human-nutrition/microsoftteams-image-16.png"
                 alt="Dietary Supplement Image">
-        </div>
+        </div> -->
 
         <!-- Overlapping Card -->
-        <div class="ds-info-card">
+        <!-- <div class="ds-info-card">
             <h2 class="ds-info-title">Dietary Supplement Solutions Consumers Trust</h2>
             <p class="ds-info-text">
                 Creating innovative consumer-preferred supplements is part science, art and business. We partner with
@@ -317,7 +215,313 @@
             </p>
             <button class="btn btn-success">Learn More</button>
         </div>
+    </section> -->
+
+    <!-- heading  -->
+    <section class="section-block py-5">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Health & Nutrition Ingredients</h2>
+                <p class="section-desc">
+                    If you are looking for ingredients to prepare health, wellness, and nutritional food products and
+                    beverages, then we are here to help you. SubNutra is a reliable partner in sourcing, developing and
+                    supplying innovative and authentic ingredients for manufacturing of health and nutritional
+                    supplements.
+                </p>
+            </div>
+        </div>
     </section>
+
+    <!-- cards -->
+    <!-- row 1st -->
+    <div class="container py-3">
+        <div class="row g-4">
+            <!-- Gums/Thickening Agent -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Gums/Thickening Agente</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <!-- DROPDOWN #1 -->
+                            <li>
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#XanthanGum">
+                                    Xanthan Gum ▾
+                                </span>
+                                <div id="XanthanGum" class="collapse sub-list">
+                                    <ul>
+                                        <li>Type A</li>
+                                        <li>Type B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal simple list item -->
+                            <li class="mt-2">Guar Gum</li>
+                            <li class="mt-2">Carrageenan (Dairy Grade)</li>
+                            <li class="mt-2">Pectin Jam Grade</li>
+                            <li class="mt-2">Whey Protein Isolate</li>
+                            <li class="mt-2">Pectin Jelly Grade</li>
+
+                            <!-- DROPDOWN #2 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#IICollagen">
+                                    Type II Collagen ▾
+                                </span>
+                                <div id="IICollagen" class="collapse sub-list">
+                                    <ul>
+                                        <li>Grade 1</li>
+                                        <li>Grade 2</li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+            <!-- Protein -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Preservative</div>
+
+                    <div class="category-items">
+                        <ul>
+
+                            <!-- DROPDOWN #1 -->
+                            <li>
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#SoyProtein">
+                                    Soya Protein Isolate 90 % ▾
+                                </span>
+                                <div id="SoyaProtein" class="collapse sub-list">
+                                    <ul>
+                                        <li>Type A</li>
+                                        <li>Type B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal simple list item -->
+                            <li class="mt-2">Soya Protein Concentrate</li>
+                            <li class="mt-2">Functional Whey Protein Concentrate 80 %</li>
+                            <li class="mt-2">Instant Whey Protein Concentrate 80 %</li>
+                            <li class="mt-2">Whey Protein Isolate</li>
+                            <li class="mt-2">Pea Protein Isolate</li>
+
+                            <!-- DROPDOWN #2 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#VWG">
+                                    VWG ▾
+                                </span>
+                                <div id="VWG" class="collapse sub-list">
+                                    <ul>
+                                        <li>Grade 1</li>
+                                        <li>Grade 2</li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- row 2nd -->
+    <!--  -->
+    <div class="container py-3">
+        <div class="row g-4">
+
+            <!-- Proteins -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Proteins</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <li>Vital wheat gluten (VWG)</li>
+                            <li>Sweet Whey Powder (SWP)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- COCOA BOX -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Cocoa</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <li>Natural Cocoa Powder</li>
+                            <li>Light Brown Cocoa Powder</li>
+                            <li>Dark Brown Cocoa Powder</li>
+                            <li>Regular Brown Cocoa Powder</li>
+                            <li>Alkalized Cocoa Powder</li>
+                            <li>DM Cocoa</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- row 3rd -->
+    <div class="container py-3">
+        <div class="row g-4">
+            <!-- PRESERVATIVE BOX -->
+
+            <!-- Amino Acids -->
+            <div class="col-md-6">
+                <div class="category-box equal-card w-100">
+
+                    <div class="category-header">Amino Acids</div>
+
+                    <div class="category-items">
+                        <ul>
+                            <!-- DROPDOWN #1 -->
+                            <li>
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#BCAA">
+                                    BCAA 2:1:1 Instant Vegam ▾
+                                </span>
+                                <div id="BCAA" class="collapse sub-list">
+                                    <ul>
+                                        <li>Type A</li>
+                                        <li>Type B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal simple list item -->
+
+
+                            <!-- DROPDOWN #2 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#BetaAlanine ">
+                                    Beta Alanine ▾
+                                </span>
+                                <div id="BetaAlanine " class="collapse sub-list">
+                                    <ul>
+                                        <li>Grade 1</li>
+                                        <li>Grade 2</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Normal item -->
+                            <li class="mt-2">Citruline Malate</li>
+
+
+                            <!-- DROPDOWN #3 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#L-Arginine">
+                                    L-Arginine▾
+                                </span>
+                                <div id="L-Arginine" class="collapse sub-list">
+                                    <ul>
+                                        <li>PGMS High Quality</li>
+                                        <li>PGMS Low Quality</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mt-2">Alcarnitine</li>
+
+                            <!-- DROPDOWN #4 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#CreatineMonoHydrate">
+                                    Creatine Mono Hydrate ▾
+                                </span>
+                                <div id="CreatineMonoHydrate" class="collapse sub-list">
+                                    <ul>
+                                        <li>Datem A</li>
+                                        <li>Datem B</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- DROPDOWN #5 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#L-Glutamine">
+                                    L-Glutamine ▾
+                                </span>
+                                <div id="L-Glutamine" class="collapse sub-list">
+                                    <ul>
+                                        <li>DMG 50%</li>
+                                        <li>DMG 90%</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- DROPDOWN #6 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#AAKG">
+                                    AAKG ▾
+                                </span>
+                                <div id="AAKG " class="collapse sub-list">
+                                    <ul>
+                                        <li>DMG 50%</li>
+                                        <li>DMG 90%</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- DROPDOWN #7 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#L-Glutamine">
+                                    L-Glutamine ▾
+                                </span>
+                                <div id="L-Glutamine" class="collapse sub-list">
+                                    <ul>
+                                        <li>DMG 50%</li>
+                                        <li>DMG 90%</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- DROPDOWN #8 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse"
+                                    data-bs-target="#L-Isolucine">
+                                    L-Isolucine ▾
+                                </span>
+                                <div id="L-Isolucine" class="collapse sub-list">
+                                    <ul>
+                                        <li>DMG 50%</li>
+                                        <li>DMG 90%</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- DROPDOWN #9 -->
+                            <li class="mt-2">
+                                <span class="dropdown-toggle-btn" data-bs-toggle="collapse" data-bs-target="#L-Valine">
+                                    L-Valine ▾
+                                </span>
+                                <div id="L-Valine" class="collapse sub-list">
+                                    <ul>
+                                        <li>DMG 50%</li>
+                                        <li>DMG 90%</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!-----------CB contact section ----------------->
     <section class=" mb-5">
         <div class="container">
@@ -349,7 +553,8 @@
 
                 <!-- Logo + About -->
                 <div class="col-lg-4 col-md-6 mb-2">
-                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3"
+                            alt="ADM Logo"></a>
 
                     <p class="text-light">
                         SGU Trade is committed to providing top-quality ingredients and solutions
@@ -357,9 +562,11 @@
                     </p>
 
                     <div class="footer-social mt-3">
-                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i
+                                class="bi bi-facebook"></i></a>
                         <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i
+                                class="bi bi-linkedin"></i></a>
                         <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
                     </div>
                 </div>
@@ -369,7 +576,7 @@
                     <h5 class="footer-title">Quick Links</h5>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About US</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="marketserved.html">Market Served</a></li>
                         <li><a href="career.html">Career</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
@@ -423,10 +630,12 @@
             <hr class="footer-line">
 
             <div class="text-center text-light copyright">
-               © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/" class="fw-bold text-decoration-none text-white">Inforag Technology</a> 
-            </div> 
+                © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/"
+                    class="fw-bold text-decoration-none text-white">Inforag Technology</a>
+            </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
