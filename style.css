@@ -120,8 +120,8 @@
 /* ---------------- MOBILE SIDEMENU ---------------- */
 .side-menu {
   width: 260px;
-  background: white;
-  
+  /* background: white; */
+  background: #111827;
   /* background: linear-gradient(135deg, #003300, #006600, #00a651); */
   position: fixed;
   left: -300px;
@@ -135,16 +135,20 @@
 .side-menu a {
   display: block;
   padding: 12px 0;
-  color: #0b2c64;
+  /* color: #0b2c64; */
+  color: #fff;
   font-size: 18px;
   text-decoration: none;
 }
-
+.side-menu span{
+    color: #fff;
+}
 .close-btn {
   font-size: 35px;
   cursor: pointer;
   text-align: right;
-  color: #0b2c64;
+  /* color: #0b2c64; */
+  color: #fff;
 }
 
 /* MOBILE DROPDOWN */
@@ -169,7 +173,9 @@
 .mobile-drop-btn a {
   flex: 0;
   margin-left: 5px;
+  
 }
+
 
 .mobile-dropdown {
   margin-top: 10px;
@@ -180,7 +186,7 @@
   font-weight: bold;
   cursor: pointer;
   padding: 10px 0;
-  color: #0b2c64;
+ color: #fff;
 }
 
 .mobile-drop-content {
@@ -192,7 +198,8 @@
   display: block;
   padding: 6px 0;
   font-size: 16px;
-  color: #333;
+  /* color: #333; */
+  color: #fff;
   text-decoration: none;
 }
 
