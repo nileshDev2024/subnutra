@@ -121,6 +121,8 @@
 .side-menu {
   width: 260px;
   background: white;
+  
+  /* background: linear-gradient(135deg, #003300, #006600, #00a651); */
   position: fixed;
   left: -300px;
   top: 0;
@@ -146,6 +148,15 @@
 }
 
 /* MOBILE DROPDOWN */
+
+.mobile-drop-btn {
+  gap: 12px;   /* New Gap Added */
+  display: flex;
+  align-items: center;
+}
+
+
+
 .mobile-drop-btn {
   display: flex;
   align-items: center;
