@@ -530,7 +530,9 @@ text-align: left;
     position: relative;
 }
 
-.sgu-main-img {
+/* .sgu-main-img */
+
+ .sgu-image-wrap img{
     width: 100%;
     height: auto;
     border-radius: 4px;
