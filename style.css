@@ -317,86 +317,111 @@
 
       /* BELOW CIRCLE SLIDER */
       .thumb-row {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: nowrap; /* Desktop: 4 items in single row */
+}
 
-      .thumb {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 4px solid #fff;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.20);
-      }
+.thumb-box {
+  flex: 1 1 22%; /* 4 items per slide */
+  text-align: center;
+}
 
-      .thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-   .thumb-name a{
-    color: black;
-   }
-      .thumb-name {
-        text-align: center;
-        font-size: 18px;
-        margin-top: 10px;
-        font-weight: 600;
-      }
+.thumb {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  margin: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+}
 
-      /* BELOW SLIDER BUTTON FIX */
-      #thumbCarousel .carousel-control-prev,
-      #thumbCarousel .carousel-control-next {
-        z-index: 4;
-        width: 50px;
-        height: 50px;
-        background: rgba(0,0,0,0.20);
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-      #thumbCarousel .carousel-control-prev-icon,
-      #thumbCarousel .carousel-control-next-icon {
-        filter: invert(1);
-      }
+.thumb-name {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 600;
+}
 
-      /* MOBILE RESPONSIVE */
-      @media (max-width: 768px) {
-        .hero-slider,
-        .hero-slide {
-          height: 40vh;
-        }
+.thumb-name a {
+  color: black;
+  text-decoration: none;
+}
 
-        .thumb {
-          width: 130px;
-          height: 130px;
-        }
+/* SLIDER BUTTONS */
+#thumbCarousel .carousel-control-prev,
+#thumbCarousel .carousel-control-next {
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.20);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-        .thumb-name {
-          font-size: 15px;
-        }
-      }
+#thumbCarousel .carousel-control-prev-icon,
+#thumbCarousel .carousel-control-next-icon {
+  filter: invert(1);
+}
 
-      @media (max-width: 480px) {
-        .thumb {
-          width: 110px;
-          height: 110px;
-        }
+/* TABLET — 2 items per slide */
+@media (max-width: 768px) {
 
-        .thumb-name {
-          font-size: 14px;
-        }
+  .thumb-row {
+    flex-wrap: wrap; /* allow 2-per-row */
+    gap: 1.5rem;
+  }
 
-        #thumbCarousel .carousel-control-prev,
-        #thumbCarousel .carousel-control-next {
-          width: 40px;
-          height: 40px;
-        }
-      }
+  .thumb-box {
+    flex: 1 1 45%; /* 2 items per slide */
+  }
+
+  .thumb {
+    width: 150px;
+    height: 150px;
+  }
+
+  .thumb-name {
+    font-size: 16px;
+  }
+}
+
+/* MOBILE — 2 items per slide */
+@media (max-width: 480px) {
+
+  .thumb-row {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .thumb-box {
+    flex: 1 1 48%;
+  }
+
+  .thumb {
+    width: 110px;
+    height: 110px;
+  }
+
+  .thumb-name {
+    font-size: 14px;
+  }
+
+  #thumbCarousel .carousel-control-prev,
+  #thumbCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 
 
 /*-------------------------- Unlocking-section------------------------- */
