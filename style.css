@@ -584,8 +584,8 @@
 /* .sgu-main-img */
 
  .sgu-image-wrap img{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height:50%;
     border-radius: 4px;
 }
 
@@ -595,8 +595,8 @@
     color: white;
     border-radius: 6px;
     position: absolute;
-    top: 60px;
-    right: 80px;
+    top: 150px;
+    right: 125px;
     width: 40%;
     min-height: 250px;
 }
@@ -610,6 +610,9 @@
         width: 100%;
         margin-top: 20px;
     }
+    .sgu-image-wrap img{
+        width: 100%;
+    }
 }
 
 /* Mobile */
@@ -617,6 +620,9 @@
     .sgu-blue-card {
         padding: 20px;
         text-align: center;
+    }
+    .sgu-image-wrap img{
+        width: 100%;
     }
 }
 
@@ -1274,7 +1280,7 @@ background-color:#fff ;
 /*---------------------------cb Contact section-------------------------- */
  .contact-block {
             width: 100%;
-            background: #007ab8;
+            background: linear-gradient(90deg, #0078b7, #005f8f);
             border-radius: 6px;
             padding: 80px 60px;
             position: relative;
@@ -1306,12 +1312,12 @@ background-color:#fff ;
         /* BUTTON */
         .cb-btn {
             padding: 14px 40px;
-            background: #ffffff;
+            /* background: #ffffff; */
             border-radius: 40px;
             border: none;
             font-size: 16px;
             font-weight: 600;
-            color: #007ab8;
+            /* color: #007ab8; */
             cursor: pointer;
         }
 
@@ -1516,7 +1522,7 @@ background-color:#fff ;
             position: absolute;
             left: 0;
             top: 0;
-            background: #6f2da8;
+             background: linear-gradient(90deg, #0078b7, #005f8f);
             width: 75%;
             height: 80%;
             color: white;
