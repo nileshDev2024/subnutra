@@ -142,36 +142,92 @@
         }
     }
     /* who we are */
-      .who-section {
-        padding: 30px 0;
+     .who-section {
+    padding: 30px 0;
+}
+
+.who-title {
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph text */
+.who-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Images default */
+.who-image {
+    width: 100%;
+    border: 5px solid #4CAF50;
+    border-radius: 8px;
+    height: 350px;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+/* Large Tablets & Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+    .who-image {
+        height: 300px;
     }
 
     .who-title {
-        color: #4CAF50;      /* Green Heading */
-        font-weight: 700;
-        font-size: 32px;
-        margin-bottom: 15px;
+        font-size: 28px;
     }
 
     .who-text {
-        font-size: 16px;
-        line-height: 1.7;
-        color: #555;
+        font-size: 15px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .who-image {
+        height: 260px;
+    }
+
+    .who-text {
+        font-size: 15px;
+    }
+}
+
+/* Mobile phones (576px and below) */
+@media (max-width: 576px) {
+    .who-section {
+        padding: 20px 0;
+    }
+
+    .who-title {
+        font-size: 24px;
     }
 
     .who-image {
-        width: 100%;
-        border: 5px solid #4CAF50;  /* Green border */
-        border-radius: 8px;
-        height: 350px;
-        object-fit: cover;
+        height: 220px;
+        border-width: 4px;
     }
 
-    @media (max-width: 768px) {
-        .who-image {
-            height: 280px;
-        }
+    .who-text {
+        font-size: 14px;
+        line-height: 1.6;
     }
+}
+
+/* Extra small devices (400px and below) */
+@media (max-width: 400px) {
+    .who-image {
+        height: 180px;
+    }
+
+    .who-title {
+        font-size: 20px;
+    }
+}
+
     /* Circle Image */
     .circle-img {
         width: 320px;
@@ -485,8 +541,8 @@
     </div>
 </section> -->
 
-<section class="who-section container">
-
+<section class="who-section">
+<div class="container">
     <!-- HEADING + TEXT -->
     <div class="row mb-5">
         <div class="col-12">
@@ -528,9 +584,10 @@
         </div>
 
     </div>
-
+</div>
 </section>
-<section class="what-section container">
+<section class="what-section ">
+    <div class="container">
     <h2 class="what-title">What We Do</h2>
 
     <div class="row gy-5">
@@ -632,6 +689,7 @@
             </div>
         </div>
 
+    </div>
     </div>
 </section>
     <!----------------Meet Our Leadership Team------------------>
@@ -779,14 +837,15 @@
     </div>
 </section> -->
 
- <footer class="adm-footer pt-5 pb-4">
+  <footer class="adm-footer pt-5 pb-4">
         <div class="container">
 
             <div class="row">
 
                 <!-- Logo + About -->
                 <div class="col-lg-4 col-md-6 mb-2">
-                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
+                    <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3"
+                            alt="ADM Logo"></a>
 
                     <p class="">
                         SGU Trade is committed to providing top-quality ingredients and solutions
@@ -794,9 +853,11 @@
                     </p>
 
                     <div class="footer-social mt-3">
-                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.facebook.com/SubNutra-Food-Ingredients-583389272172215/"><i
+                                class="bi bi-facebook"></i></a>
                         <a href="https://www.instagram.com/subnutra_/"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/company/subnutra-food-ingredients/"><i
+                                class="bi bi-linkedin"></i></a>
                         <a href="https://twitter.com/subnutra"><i class="bi bi-twitter"></i></a>
                     </div>
                 </div>
@@ -859,9 +920,10 @@
             </div>
             <hr class="footer-line">
 
-            <div class="text-center text-light copyright">
-               © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/" class="fw-bold text-decoration-none text-white">Inforag Technology</a> 
-            </div> 
+            <div class="text-center  copyright">
+                © 2025 SGU Trade All rights reserved. Developed & Maintained by <a href="https://inforag.com/"
+                    class="fw-bold text-decoration-none text-black">Inforag Technology</a>
+            </div>
     </footer>
 
     <script src="script.js"></script>

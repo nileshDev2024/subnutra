@@ -15,12 +15,14 @@
 ---------------------------- */
 .career-hero {
     height: 75vh;
-    background: linear-gradient(135deg, #0b2c64 10%, #144b9e 70%);
+    background: linear-gradient(90deg, #0078b7, #005f8f);
+    /* background: linear-gradient(135deg, #0b2c64 10%, #144b9e 70%); */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 15px;
+    margin-top: 50px;
 }
 
 .career-hero h1 {
@@ -49,62 +51,104 @@
 /* ----------------------------
    LEARNING & DEVELOPMENT
 ---------------------------- */
+/* MAIN SECTION */
+.learning-section {
+      /* background: linear-gradient(90deg, #0078b7, #005f8f);; */
+    /* background: #2b2b2b;       dark background for modern look */
+}
+
+/* LEFT CONTENT BOX */
 .learning-section .left-box {
-    padding: 40px;
-    min-height: auto;
-    text-align: left;
+    padding: 60px;
+    min-height: 100%;
+     background: linear-gradient(90deg, #0078b7, #005f8f);;
+     color: #fff;
 }
 
-.learning-section h1 {
-    font-size: 60px;
-    line-height: 1.1;
+/* Title */
+.learning-section .section-title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 25px;
 }
 
-.learning-section p {
+/* Paragraph */
+.learning-section .section-text {
     font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #f1f1f1;
 }
 
+/* IMAGE STYLING */
 .learning-section img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
+
+/* ===============================
+   SMALL DEVICES (Phones)
+================================= */
 @media (max-width: 767px) {
-    .learning-section {
+
+    /* Reverse column on mobile */
+    .learning-section .row {
         flex-direction: column-reverse;
     }
+
     .learning-section .left-box {
-        padding: 20px;
+        padding: 30px 20px;
         text-align: center;
     }
-    .learning-section h1 {
+
+    .learning-section .section-title {
         font-size: 32px;
+        line-height: 1.2;
+        font-weight: 700;
     }
-    .learning-section p {
+
+    .learning-section .section-text {
         font-size: 16px;
+        line-height: 1.6;
     }
+
     .learning-section img {
-        height: auto;
-        width: 100%;
-        margin-bottom: 20px;
+        height: 250px;
+        object-fit: cover;
     }
 }
 
+
+/* ===============================
+   TABLETS (768px - 991px)
+================================= */
 @media (min-width: 768px) and (max-width: 991px) {
-    .learning-section h1 {
-        font-size: 48px;
+
+    .learning-section .left-box {
+        padding: 40px;
     }
-    .learning-section p {
+
+    .learning-section .section-title {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .learning-section .section-text {
         font-size: 18px;
     }
 }
+
 
 /* ----------------------------
    WHY JOIN US - GLASS CARDS
 ---------------------------- */
 .glass-card {
-    background: rgba(241, 15, 37, 0.2);
+    /* background: rgba(241, 15, 37, 0.2); */
+     background: linear-gradient(90deg, #0078b7, #005f8f);;
+     color: #fff;
     padding: 25px;
     margin: 10px 0;
 }
@@ -293,17 +337,17 @@ img {
         <a href="contact-us.html">Contact Us</a>
     </div>
     <!-- learning Developement -->
-  <section class="learning-section">
+ <section class="learning-section">
     <div class="container-fluid p-0">
         <div class="row g-0">
 
             <!-- LEFT CONTENT -->
             <div class="col-md-6 text-white left-box d-flex align-items-center">
                 <div class="content-wrapper">
-                    <h1 class="fw-bold display-4 mb-4">Learning &<br>Growth at SGU Trade</h1>
-                    <p class="lead">
-                        At SGU Trade, we encourage continuous learning and professional development. 
-                        Our team explores new solutions, stays updated on industry trends, and grows 
+                    <h1 class="fw-bold section-title">Learning &<br>Growth at SGU Trade</h1>
+                    <p class="section-text">
+                        At SGU Trade, we encourage continuous learning and professional development.
+                        Our team explores new solutions, stays updated on industry trends, and grows
                         with every opportunity to deliver high-quality ingredients and innovative services.
                     </p>
                 </div>
@@ -318,6 +362,7 @@ img {
         </div>
     </div>
 </section>
+
 
 
 
