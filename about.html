@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <style>
-    .about-sgutrade {
+   .about-sgutrade {
         position: relative;
         width: 100%;
         height: 100vh;
         overflow: hidden;
     }
 
-    /* LEFT PURPLE AREA (75%) */
+    /* LEFT PURPLE AREA */
     .sgu-left {
         position: absolute;
         left: 0;
@@ -39,8 +39,8 @@
     }
 
     .sgu-heading {
-        font-size: 55px;
-        font-weight: 700;
+        font-size: 48px;
+        font-weight: 400;
         line-height: 1.1;
     }
 
@@ -50,7 +50,7 @@
         line-height: 1.5;
     }
 
-    /* RIGHT SIDE GRAIN BACKGROUND (25%) */
+    /* RIGHT GRAIN BG */
     .sgu-grain {
         position: absolute;
         right: 0;
@@ -67,23 +67,50 @@
     .sgu-food {
         position: absolute;
         top: 40%;
-        right: 5%;
+        height: 70%;
+        right: 15%;
         transform: translateY(-50%);
-        width: 40%;
+        width: 25%;
         border-radius: 6px;
         object-fit: cover;
         z-index: 3;
     }
 
-    /* RESPONSIVE FOR TABLET / MOBILE */
-    @media(max-width: 992px) {
+
+
+    /* ============================== */
+    /* 🔥 FIX FOR 1024–1200px SCREEN */
+    /* ============================== */
+    @media(max-width: 1200px) {
+
+        .sgu-food {
+            width: 33%;
+            right: 3%;
+            top: 45%;
+        }
+
+        .sgu-heading {
+            font-size: 44px;
+        }
+
+        .sgu-left {
+            padding-left: 60px;
+            padding-right: 40px;
+        }
+    }
+
+
+    /* ============================== */
+    /* 🔥 TABLET & BELOW (NO OVERLAP) */
+    /* ============================== */
+    @media(max-width: 1024px) {
 
         .about-sgutrade {
             height: auto;
-            padding-bottom: 40px;
+            /* padding-bottom: 40px; */
         }
 
-        /* IMAGE TOP FULL WIDTH */
+        /* IMAGE AS FULL WIDTH */
         .sgu-food {
             position: relative;
             width: 100%;
@@ -93,14 +120,15 @@
             transform: none;
             border-radius: 0;
             display: block;
+            margin-bottom: 0;
         }
 
-        /* HIDE GRAIN COMPLETELY */
+        /* HIDE RIGHT GRAIN */
         .sgu-grain {
             display: none;
         }
 
-        /* PURPLE BOX BELOW IMAGE */
+        /* PURPLE BOX */
         .sgu-left {
             position: relative;
             width: 100%;
@@ -110,13 +138,40 @@
         }
 
         .sgu-heading {
-            font-size: 40px;
+            font-size: 38px;
         }
     }
+    /* who we are */
+      .who-section {
+        padding: 30px 0;
+    }
 
+    .who-title {
+        color: #4CAF50;      /* Green Heading */
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
 
+    .who-text {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #555;
+    }
 
+    .who-image {
+        width: 100%;
+        border: 5px solid #4CAF50;  /* Green border */
+        border-radius: 8px;
+        height: 350px;
+        object-fit: cover;
+    }
 
+    @media (max-width: 768px) {
+        .who-image {
+            height: 280px;
+        }
+    }
     /* Circle Image */
     .circle-img {
         width: 320px;
@@ -232,6 +287,75 @@
     bottom: 0;
 }
 
+
+ .what-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .what-title {
+        color: #2E8B57;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .what-title::after {
+        content: "";
+        width: 80px;
+        height: 3px;
+        background: #2E8B57;
+        display: block;
+        margin: 10px auto 0;
+        border-radius: 5px;
+    }
+
+    .what-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px 20px;
+        border: 1px solid #2E8B57;
+        position: relative;
+        transition: 0.3s ease;
+        min-height: 250px;
+    }
+
+    .what-card:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .what-icon {
+        width: 65px;
+        height: 65px;
+        background: #2E8B57;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 32px;
+    }
+
+    .what-heading {
+        font-size: 20px;
+        font-weight: 700;
+        color: #2E8B57;
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+
+    .what-text {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.6;
+    }
+
 </style>
 
 <body>
@@ -312,7 +436,7 @@
  <section class="about-sgutrade">
 
     <!-- FOOD IMAGE TOP (MOBILE) -->
-    <img src="https://www.adm.com/globalassets/about-adm/aboutadm_c15_img-1.jpeg" class="sgu-food" alt="Food Ingredients">
+    <img src="https://i.pinimg.com/1200x/83/00/06/83000648271015e8986b6bdc75b42a41.jpg" class="sgu-food" alt="Food Ingredients">
 
     <!-- LEFT PURPLE BOX -->
     <div class="sgu-left">
@@ -329,23 +453,23 @@
     <!-- RIGHT BACKGROUND GRAIN -->
     <div class="sgu-grain"></div>
 </section>
-  <section class="quine-section">
+  <!-- <section class="quine-section">
     <div class="container py-5">
-        <div class="row ">
+        <div class="row "> -->
 
             <!-- LEFT SECTION -->
-            <div class="col-12 col-md-6 quine-left position-relative">
+            <!-- <div class="col-12 col-md-6 quine-left position-relative"> -->
 
                 <!-- BACKGROUND PATTERN -->
-                <img src="./images/harsheting_grapes.webp" class="quine-bg img-fluid" alt="bg">
+                <!-- <img src="./images/harsheting_grapes.webp" class="quine-bg img-fluid" alt="bg"> -->
 
                 <!-- MAIN FOOD IMAGE -->
-                <img src="./images/harsheting_img.jpeg" class="quine-main img-fluid" alt="product">
+                <!-- <img src="./images/harsheting_img.jpeg" class="quine-main img-fluid" alt="product"> -->
 
-            </div>
+            <!-- </div> -->
 
             <!-- RIGHT SECTION -->
-            <div class="col-12 col-md-6 quine-content">
+            <!-- <div class="col-12 col-md-6 quine-content">
                 <h2 class="fw-bold">Harnessing Nature for Better Food</h2>
 
                 <p>
@@ -359,10 +483,159 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
+<section class="who-section container">
+
+    <!-- HEADING + TEXT -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="who-title">WHO WE ARE</h2>
+
+            <p class="who-text">
+                SGU Trade Pvt Ltd. has an extensive portfolio of food ingredients that includes bakery,
+                dairy, prepared foods, confectionery, pet foods, beverages, health, and nutritional products.
+            </p>
+
+            <p class="who-text">
+                SubNutra is driven by an industry expert team with expertise in distribution and quality.
+                Our team is able to provide you with a huge range of ingredients that will meet all your requirements.
+                SubNutra is a proud supplier of quality ingredients to some of the biggest food manufacturer
+                companies of India & globally. Our aim is to deliver you the best quality & reliable products.
+            </p>
+        </div>
+    </div>
+
+    <!-- IMAGES ROW -->
+    <div class="row g-4">
+
+        <div class="col-md-4 col-sm-12">
+            <img src="https://i.pinimg.com/1200x/fc/6e/7d/fc6e7d926fc8cfbae85ac3b79c967ba0.jpg"
+                 class="who-image"
+                 alt="cake">
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <img src="https://i.pinimg.com/1200x/a1/8a/e3/a18ae31e0eb8cafa55de290a73ea9884.jpg"
+                 class="who-image"
+                 alt="ice-cream">
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <img src="https://i.pinimg.com/1200x/a2/54/ab/a254ab3176f62d952a39db1c7a2a6a2b.jpg"
+                 class="who-image"
+                 alt="cookies">
+        </div>
+
+    </div>
+
+</section>
+<section class="what-section container">
+    <h2 class="what-title">What We Do</h2>
+
+    <div class="row gy-5">
+
+        <!-- Manufacturer -->
+        <div class="col-lg-4 col-md-6">
+            <div class="what-card">
+                <div class="what-icon">
+                    <i class="bi bi-gear-fill"></i>
+                </div>
+                <h4 class="what-heading">Manufacturer</h4>
+                <p class="what-text">
+                    We are a leading manufacturer of quality food ingredients in India, producing specialty
+                    ingredients for dairy, bakery & other industries.
+                </p>
+            </div>
+        </div>
+
+        <!-- Importer -->
+        <div class="col-lg-4 col-md-6">
+            <div class="what-card">
+                <div class="what-icon">
+                    <i class="bi bi-cloud-download-fill"></i>
+                </div>
+                <h4 class="what-heading">Importer</h4>
+                <p class="what-text">
+                    In order to deliver the finest products, SubNutra imports food and beverage ingredients
+                    across the globe.
+                </p>
+            </div>
+        </div>
+
+        <!-- Exporter -->
+        <div class="col-lg-4 col-md-6">
+            <div class="what-card">
+                <div class="what-icon">
+                    <i class="bi bi-send-fill"></i>
+                </div>
+                <h4 class="what-heading">Exporter</h4>
+                <p class="what-text">
+                    We export a wide range of superior quality food ingredients & products worldwide.
+                </p>
+            </div>
+        </div>
+
+        <!-- Distribution -->
+        <div class="col-lg-4 col-md-6">
+            <div class="what-card">
+                <div class="what-icon">
+                    <i class="bi bi-truck"></i>
+                </div>
+                <h4 class="what-heading">Distribution</h4>
+                <p class="what-text">
+                    SubNutra is a trusted wholesale distributor committed to providing competitively sourced,
+                    exotic food & beverage ingredients.
+                </p>
+            </div>
+        </div>
+
+        <!-- Trader -->
+        <div class="col-lg-4 col-md-6">
+            <div class="what-card">
+                <div class="what-icon">
+                    <i class="bi bi-briefcase-fill"></i>
+                </div>
+                <h4 class="what-heading">Trader</h4>
+                <p class="what-text">
+                    We sell raw materials and food ingredients to our customers active in confectionery, dairy,
+                    beverages and other food industries.
+                </p>
+            </div>
+        </div>
+
+        <!-- Supplier -->
+        <div class="col-lg-4 col-md-6">
+            <div class="what-card">
+                <div class="what-icon">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <h4 class="what-heading">Supplier</h4>
+                <p class="what-text">
+                    SubNutra Food Ingredients Pvt. Ltd. is a professional ingredient supplier for the Food and
+                    Beverage industries.
+                </p>
+            </div>
+        </div>
+
+        <!-- Research -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+            <div class="what-card">
+                <div class="what-icon">
+                    <i class="bi bi-flask"></i>
+                </div>
+                <h4 class="what-heading">Research & Product Development</h4>
+                <p class="what-text">
+                    We check, test, develop & research ingredients & products to provide the finest quality food
+                    ingredients to our clients.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
     <!----------------Meet Our Leadership Team------------------>
-  <section class="leadership-header container py-5">
+  <!-- <section class="leadership-header container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6">
             <h1 class="display-4 fw-bold">Meet Our<br>Leadership<br>Team</h1>
@@ -378,22 +651,22 @@
             </p>
         </div>
     </div>
-</section>
+</section> -->
 
 
 
 <!-- ===========================
     TITLE: SENIOR LEADERSHIP
 =========================== -->
-<section class="container mb-4">
+<!-- <section class="container mb-4">
     <h3 class="fw-bold mb-4">Senior Leadership</h3>
-</section>
+</section> -->
 
 
 <!-- ===========================
     5 MEMBER ROW
 =========================== -->
-<section class="container pb-5">
+<!-- <section class="container pb-5">
     <div class="row ">
 
         <div class="col-md-3">
@@ -435,11 +708,11 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
 <!-- Real-World Outcomes -->
 
-<section class="py-5">
+<!-- <section class="py-5">
     <div class="container">
 
         <h3 class="fw-bold mb-2">Real-World Impact</h3>
@@ -448,10 +721,10 @@
             sustainable practices, and innovative solutions that make a tangible difference.
         </p>
 
-        <div class="row g-4">
+        <div class="row g-4"> -->
 
             <!-- CARD 1 -->
-            <div class="col-6 col-sm-6 col-md-3">
+            <!-- <div class="col-6 col-sm-6 col-md-3">
                 <div class="img-card">
                     <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-01-c61-255x339.jpg"
                          class="img-fluid rounded">
@@ -461,10 +734,10 @@
                         <p>Supporting better access to nutritious ingredients and food products for communities worldwide.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- CARD 2 -->
-            <div class="col-6 col-sm-6 col-md-3">
+            <!-- <div class="col-6 col-sm-6 col-md-3">
                 <div class="img-card">
                     <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-02-c61-255x339.jpg"
                          class="img-fluid rounded">
@@ -474,10 +747,10 @@
                         <p>Promoting responsible farming practices to enhance soil health and ensure long-term productivity.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- CARD 3 -->
-            <div class="col-6 col-sm-6 col-md-3">
+            <!-- <div class="col-6 col-sm-6 col-md-3">
                 <div class="img-card">
                     <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-04-c61-255x339.jpg"
                          class="img-fluid rounded">
@@ -487,10 +760,10 @@
                         <p>Providing resources and guidance to strengthen farm resilience and local agricultural economies.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- CARD 4 -->
-            <div class="col-6 col-sm-6 col-md-3">
+            <!-- <div class="col-6 col-sm-6 col-md-3">
                 <div class="img-card">
                     <img src="https://www.adm.com/globalassets/sustainability/goals--programs/adm-cares/04-03-c61-255x339.jpg"
                          class="img-fluid rounded">
@@ -504,7 +777,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 
  <footer class="adm-footer pt-5 pb-4">
         <div class="container">
@@ -515,7 +788,7 @@
                 <div class="col-lg-4 col-md-6 mb-2">
                     <a href="index.html"> <img src="./images/Header-Logo.png" class="footer-logo mb-3" alt="ADM Logo"></a>
 
-                    <p class="text-light">
+                    <p class="">
                         SGU Trade is committed to providing top-quality ingredients and solutions
                         that improve lives and empower industries globally.
                     </p>
