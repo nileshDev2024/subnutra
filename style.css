@@ -1547,7 +1547,7 @@ background-color:#fff ;
             position: absolute;
             left: 0;
             top: 0;
-             background: linear-gradient(90deg, #0078b7, #005f8f);
+          background: linear-gradient(90deg, #0078b7, #005f8f);
             width: 75%;
             height: 80%;
             color: white;
@@ -1637,3 +1637,39 @@ background-color:#fff ;
                 font-size: 40px;
             }
         }
+        /* FIX FOR 1024px – TABLET LANDSCAPE */
+@media (max-width: 1024px) {
+
+    .sgu-hero {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    /* FOOD IMAGE SHOULD NOT BE ABSOLUTE */
+    .sgu-food {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        top: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        border-radius: 0;
+        margin-bottom: 0;
+        z-index: 1;
+    }
+
+    /* LEFT CONTENT BOX COMES BELOW IMAGE */
+    .sgu-left {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 50px 35px !important;
+        margin-top: 0 !important;
+        z-index: 2;
+    }
+
+    /* Grain hide */
+    .sgu-grain {
+        display: none !important;
+    }
+}
