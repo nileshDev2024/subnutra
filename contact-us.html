@@ -56,6 +56,40 @@
     }
 }
 
+
+.map-box {
+      position: relative;
+      width: 100%;
+      max-width: auto; 
+      margin: auto;
+    }
+
+    .map-box img {
+      width: 75%;
+      /* height: 70%; */
+      border-radius: 10px;
+    }
+
+    /* PIN CSS */
+    .pin {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: red;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Pin pulse effect */
+    @keyframes pulse {
+      0% { transform: translate(-50%, -100%) scale(1); }
+      50% { transform: translate(-50%, -100%) scale(1.2); }
+      100% { transform: translate(-50%, -100%) scale(1); }
+    }
  </style>
 <body>
       <header class="header">
@@ -255,6 +289,22 @@
         </div>
         
     </section>
+    <!-- pin map -->
+<section>
+    <div class="container text-center py-5">
+
+  <h2 class="mb-4 fw-bold">Find Us</h2>
+
+  <div class="map-box">
+    <!-- India Map Image -->
+    <img src="https://i.pinimg.com/1200x/ae/91/98/ae919824db35b7f24b2ed41b8ebdae27.jpg" alt="India Map">
+
+    <!-- Pin Position (Adjust top/left as per your location) -->
+    <!-- <div class="pin" style="top: 48%; left: 52%;"></div> -->
+  </div>
+
+</div>
+</section>
     <!-- footer -->
       <footer class="adm-footer pt-5 pb-4">
         <div class="container">
